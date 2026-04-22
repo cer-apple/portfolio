@@ -26,3 +26,8 @@ def contact(request):
     return render(request, 'contact.html')
 
 
+def hobby(request):
+    """Hobby page view"""
+    return render(request, 'hobby.html')
+
+

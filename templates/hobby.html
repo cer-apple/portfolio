@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Hobby - Portfolio{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">HOBBY</h1>
+
+    <p class="hobby-intro">
+        Football is one of my lifelong passions. In March 2018, I traveled across
+        Europe to experience legendary stadiums live — Signal Iduna Park in
+        Dortmund and Santiago Bernabéu in Madrid.
+    </p>
+
+    <div class="hobby-gallery">
+        <figure class="hobby-photo">
+            <img src="{% static 'main/images/dortmund-2018.webp' %}" alt="Signal Iduna Park, Dortmund — March 2018">
+            <figcaption>Signal Iduna Park · Dortmund, Germany · March 8, 2018</figcaption>
+        </figure>
+
+        <figure class="hobby-photo">
+            <img src="{% static 'main/images/madrid-2018-a.webp' %}" alt="Santiago Bernabéu, Madrid — March 2018">
+            <figcaption>Santiago Bernabéu · Madrid, Spain · March 2018</figcaption>
+        </figure>
+
+        <figure class="hobby-photo">
+            <img src="{% static 'main/images/madrid-2018-b.webp' %}" alt="Santiago Bernabéu, Madrid — March 2018">
+            <figcaption>Santiago Bernabéu · Madrid, Spain · March 2018</figcaption>
+        </figure>
+    </div>
+</div>
+{% endblock %}
