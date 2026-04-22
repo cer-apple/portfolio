@@ -1,16 +1,23 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Service Charge - Advisory & Consulting{% endblock %}
 
 {% block content %}
 <div class="page-container advisory-detail">
-    <nav class="advisory-breadcrumb" aria-label="Breadcrumb">
-        <a href="{% url 'advisory' %}">Advisory</a>
-        <span>&rsaquo;</span>
-        <span>Service Charge</span>
-    </nav>
-
-    <h1 class="advisory-detail-title">Service Charge</h1>
+    <div class="advisory-detail-header">
+        <div class="advisory-detail-heading">
+            <nav class="advisory-breadcrumb" aria-label="Breadcrumb">
+                <a href="{% url 'advisory' %}">Advisory</a>
+                <span>&rsaquo;</span>
+                <span>Service Charge</span>
+            </nav>
+            <h1 class="advisory-detail-title">Service Charge</h1>
+        </div>
+        <div class="advisory-detail-portrait" aria-hidden="true">
+            <img src="{% static 'main/images/portrait.jpg' %}" alt="Tatsuki Okonogi portrait">
+        </div>
+    </div>
 
     <section class="advisory-detail-section">
         <h2 class="advisory-detail-section-title">
