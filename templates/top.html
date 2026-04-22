@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home - Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-image">
+            <img src="{% static 'main/images/portrait.jpg' %}" alt="Portrait" class="portrait">
+        </div>
+        <div class="hero-text">
+            <h1 class="hero-title">WELCOME</h1>
+            <p class="hero-subtitle">Unleashing human potential — for companies, professionals, and children — through AI</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
