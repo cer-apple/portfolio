@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Advisory & Consulting - Portfolio{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">ADVISORY</h1>
+
+    <div class="advisory-summary">
+        <p class="advisory-catchphrase">
+            外資グローバル企業のビジネス経験と、<br>
+            AI時代のテクノロジー活用をベースに、<br>
+            個人のキャリアと企業の変革をサポートします。
+        </p>
+
+        <div class="advisory-note">
+            <p>個人向けサービス</p>
+            <p>法人向けサービス</p>
+            <p>など、ご希望に応じて対応致します。</p>
+            <p>ご相談ください。</p>
+        </div>
+
+        <a href="{% url 'advisory_detail' %}" class="advisory-link">詳しくはこちらをご覧ください。</a>
+    </div>
+</div>
+{% endblock %}

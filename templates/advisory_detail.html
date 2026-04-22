@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Service Charge - Advisory & Consulting{% endblock %}
+
+{% block content %}
+<div class="page-container advisory-detail">
+    <nav class="advisory-breadcrumb" aria-label="Breadcrumb">
+        <a href="{% url 'advisory' %}">Advisory</a>
+        <span>&rsaquo;</span>
+        <span>Service Charge</span>
+    </nav>
+
+    <h1 class="advisory-detail-title">Service Charge</h1>
+
+    <section class="advisory-detail-section">
+        <h2 class="advisory-detail-section-title">
+            個人向けサービス<span class="advisory-detail-section-tag">Personal</span>
+        </h2>
+
+        <div class="advisory-services-grid">
+            <article class="advisory-service">
+                <h3 class="advisory-service-name">GRE・GMATコンサルティング</h3>
+                <p class="advisory-service-price">60分 ¥15,000〜</p>
+                <p class="advisory-service-desc">
+                    MBA・大学院留学を目指す方へ、スコアアップ戦略から学習計画までサポート。
+                </p>
+            </article>
+
+            <article class="advisory-service">
+                <h3 class="advisory-service-name">MBA出願アドバイス</h3>
+                <p class="advisory-service-price">単発相談: 60分 ¥20,000〜 / 出願パッケージ: 要相談</p>
+                <p class="advisory-service-desc">
+                    トップMBA出願の戦略設計。スクール選定、Why School / Why MBA の壁打ち、推薦状戦略まで。
+                </p>
+            </article>
+
+            <article class="advisory-service">
+                <h3 class="advisory-service-name">出願エッセイ添削</h3>
+                <p class="advisory-service-price">1本 ¥10,000〜</p>
+                <p class="advisory-service-desc">
+                    MBA・大学院向けエッセイの添削と構成アドバイス。英語ネイティブレベルの論理構成にブラッシュアップ。
+                </p>
+            </article>
+
+            <article class="advisory-service">
+                <h3 class="advisory-service-name">IELTSオンラインレッスン</h3>
+                <p class="advisory-service-price">1回45分 ¥8,000（要相談・継続割引あり）</p>
+                <p class="advisory-service-desc">
+                    週1回45分のマンツーマンレッスン。スコア目標から逆算したカリキュラム。
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="advisory-detail-section">
+        <h2 class="advisory-detail-section-title">
+            法人向けサービス<span class="advisory-detail-section-tag">Corporate</span>
+        </h2>
+
+        <div class="advisory-services-grid">
+            <article class="advisory-service">
+                <h3 class="advisory-service-name">DXコンサルティング</h3>
+                <p class="advisory-service-price">60分 ¥50,000〜 / 月額顧問 ¥300,000〜</p>
+                <p class="advisory-service-desc">
+                    外資グローバル企業での6年以上のエンタープライズ営業経験をベースに、DX戦略立案から現場実装まで伴走支援。
+                </p>
+            </article>
+
+            <article class="advisory-service">
+                <h3 class="advisory-service-name">AI活用支援</h3>
+                <p class="advisory-service-price">プロジェクト契約 要相談</p>
+                <p class="advisory-service-desc">
+                    Python自動化による既存業務のスクリプト化・反復作業の削減、Claude などのAIを活用した Vibe Coding 型開発プロセスの導入支援。
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="advisory-contact">
+        <h2 class="advisory-contact-title">お問い合わせ</h2>
+        <p class="advisory-contact-desc">
+            個人向け・法人向け問わず、まずはお気軽にご相談ください。<br>
+            48時間以内に返信いたします。
+        </p>
+        <a href="{{ contact_form_url }}" target="_blank" rel="noopener noreferrer" class="contact-button">Contact Us</a>
+    </section>
+</div>
+{% endblock %}

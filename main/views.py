@@ -31,3 +31,16 @@ def hobby(request):
     return render(request, 'hobby.html')
 
 
+def advisory(request):
+    """Advisory & Consulting summary page"""
+    return render(request, 'advisory.html')
+
+
+def advisory_detail(request):
+    """Advisory & Consulting detail page with services and contact CTA"""
+    context = {
+        'contact_form_url': 'https://forms.gle/PLACEHOLDER',
+    }
+    return render(request, 'advisory_detail.html', context)
+
+

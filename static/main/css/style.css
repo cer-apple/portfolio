@@ -1,3 +1,7 @@
+:root {
+    --accent-orange: #FF6B1A;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -524,5 +528,214 @@ body {
     }
     .hobby-photo img {
         height: 280px;
+    }
+}
+
+/* Advisory — Summary page */
+.advisory-summary {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 20px 0 40px;
+}
+
+.advisory-catchphrase {
+    font-family: 'Playfair Display', 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.9;
+    color: #fff;
+    margin-bottom: 80px;
+    letter-spacing: 1px;
+}
+
+.advisory-note {
+    color: #bbb;
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 90px;
+}
+
+.advisory-note p {
+    margin: 0;
+}
+
+.advisory-link {
+    color: var(--accent-orange);
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.advisory-link:hover {
+    border-bottom-color: var(--accent-orange);
+}
+
+/* Advisory — Detail page */
+.advisory-detail {
+    max-width: 1100px;
+}
+
+.advisory-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+.advisory-breadcrumb a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.advisory-breadcrumb a:hover {
+    color: #fff;
+}
+
+.advisory-breadcrumb span {
+    color: #666;
+}
+
+.advisory-detail-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+}
+
+.advisory-detail-section {
+    margin-bottom: 90px;
+}
+
+.advisory-detail-section-title {
+    font-family: 'Playfair Display', 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+    letter-spacing: 0.5px;
+}
+
+.advisory-detail-section-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #888;
+    letter-spacing: 3px;
+    margin-left: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.advisory-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 70px;
+}
+
+.advisory-service {
+    padding: 0;
+}
+
+.advisory-service-name {
+    font-family: 'Playfair Display', 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.advisory-service-price {
+    font-size: 14px;
+    color: #bbb;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.advisory-service-desc {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Advisory — Contact section */
+.advisory-contact {
+    text-align: center;
+    padding-top: 70px;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
+
+.advisory-contact-title {
+    font-family: 'Playfair Display', 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+}
+
+.advisory-contact-desc {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 45px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 52px;
+    border: 1px solid #fff;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .advisory-catchphrase {
+        font-size: 20px;
+        line-height: 1.8;
+        margin-bottom: 50px;
+    }
+    .advisory-note {
+        margin-bottom: 60px;
+    }
+    .advisory-detail-title {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    .advisory-detail-section {
+        margin-bottom: 70px;
+    }
+    .advisory-detail-section-title {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    .advisory-services-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .advisory-contact-title {
+        font-size: 26px;
+    }
+    .contact-button {
+        padding: 14px 40px;
+        letter-spacing: 2px;
     }
 }
