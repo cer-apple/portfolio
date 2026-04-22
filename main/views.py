@@ -39,7 +39,7 @@ def advisory(request):
 def advisory_detail(request):
     """Advisory & Consulting detail page with services and contact CTA"""
     context = {
-        'contact_form_url': 'https://forms.gle/PLACEHOLDER',
+        'contact_form_url': 'https://docs.google.com/forms/d/e/1FAIpQLScK6VOUFJetWAJvklLkR-zUz-n0vXXYUObrRRAg3q9nHahjUw/viewform',
     }
     return render(request, 'advisory_detail.html', context)
 
