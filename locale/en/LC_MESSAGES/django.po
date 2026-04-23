@@ -1,0 +1,450 @@
+# English translations for Tatsuki Okonogi portfolio.
+# Copyright (C) 2026
+# This file is distributed under the same license as the portfolio package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: portfolio 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-23 00:05+0000\n"
+"PO-Revision-Date: 2026-04-22 00:00+0000\n"
+"Last-Translator: Tatsuki Okonogi\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/advisory.html:4 templates/advisory_detail.html:5
+msgid "Advisory & Consulting"
+msgstr ""
+
+#: templates/advisory.html:4 templates/contact.html:4
+#: templates/education.html:4 templates/hobby.html:5 templates/profile.html:5
+#: templates/top.html:5 templates/work.html:4
+msgid "Portfolio"
+msgstr ""
+
+#: templates/advisory.html:8 templates/base.html:40
+msgid "ADVISORY"
+msgstr ""
+
+#: templates/advisory.html:12
+msgid ""
+"Drawing on enterprise experience at global firms<br>\n"
+"            and a fluent command of AI-era technology —<br>\n"
+"            I help individuals shape their careers<br>\n"
+"            and companies drive meaningful transformation."
+msgstr ""
+
+#: templates/advisory.html:19
+msgid "Personal advisory"
+msgstr ""
+
+#: templates/advisory.html:20
+msgid "Corporate consulting"
+msgstr ""
+
+#: templates/advisory.html:21
+msgid "Flexible engagements tailored to your goals."
+msgstr ""
+
+#: templates/advisory.html:22
+msgid "Feel free to reach out."
+msgstr ""
+
+#: templates/advisory.html:25
+msgid "See full services & pricing →"
+msgstr ""
+
+#: templates/advisory_detail.html:5 templates/advisory_detail.html:14
+#: templates/advisory_detail.html:16
+msgid "Service Charge"
+msgstr ""
+
+#: templates/advisory_detail.html:12
+msgid "Advisory"
+msgstr ""
+
+#: templates/advisory_detail.html:25
+msgid "Personal Advisory"
+msgstr ""
+
+#: templates/advisory_detail.html:25
+msgid "For Individuals"
+msgstr ""
+
+#: templates/advisory_detail.html:31
+msgid "60 min — from ¥15,000"
+msgstr ""
+
+#: templates/advisory_detail.html:33
+msgid ""
+"For applicants to MBA and graduate programs abroad. End-to-end support from "
+"score-improvement strategy through study-plan design."
+msgstr ""
+
+#: templates/advisory_detail.html:39
+msgid ""
+"Single session: 60 min — from ¥20,000 &nbsp;/&nbsp; Full application "
+"package: upon request"
+msgstr ""
+
+#: templates/advisory_detail.html:41
+msgid ""
+"Strategic guidance for top-MBA applicants — school selection, Why School / "
+"Why MBA sparring, and recommendation-letter strategy."
+msgstr ""
+
+#: templates/advisory_detail.html:47
+msgid "Per essay — from ¥10,000"
+msgstr ""
+
+#: templates/advisory_detail.html:49
+msgid ""
+"Editing and structural feedback on MBA and graduate-school essays, polished "
+"to a native-level standard of logic and flow."
+msgstr ""
+
+#: templates/advisory_detail.html:55
+msgid "45 min — ¥8,000 (continuing-student discount available on request)"
+msgstr ""
+
+#: templates/advisory_detail.html:57
+msgid ""
+"Weekly 45-minute 1-on-1 lessons with a curriculum built backward from your "
+"target score."
+msgstr ""
+
+#: templates/advisory_detail.html:65
+msgid "Corporate Consulting"
+msgstr ""
+
+#: templates/advisory_detail.html:65
+msgid "For Companies"
+msgstr ""
+
+#: templates/advisory_detail.html:71
+msgid "60 min — from ¥50,000 &nbsp;/&nbsp; Monthly retainer — from ¥300,000"
+msgstr ""
+
+#: templates/advisory_detail.html:73
+msgid ""
+"Drawing on 6+ years of enterprise-sales experience at global firms, I "
+"partner with teams end-to-end — from DX strategy through on-the-ground "
+"implementation."
+msgstr ""
+
+#: templates/advisory_detail.html:79
+msgid "Project-based engagement — upon request"
+msgstr ""
+
+#: templates/advisory_detail.html:81
+msgid ""
+"Automating repetitive workflows with Python, and introducing AI-assisted "
+"\"vibe coding\" development processes powered by Claude and similar models."
+msgstr ""
+
+#: templates/advisory_detail.html:88 templates/contact.html:12
+msgid "Get in Touch"
+msgstr ""
+
+#: templates/advisory_detail.html:90
+msgid ""
+"Whether you're an individual or a company, feel free to reach out.<br>\n"
+"            I'll respond within 48 hours."
+msgstr ""
+
+#: templates/advisory_detail.html:93
+msgid "Contact Us"
+msgstr ""
+
+#: templates/base.html:9 templates/base.html:15 templates/base.html:20
+msgid "Tatsuki Okonogi — Portfolio"
+msgstr ""
+
+#: templates/base.html:11
+msgid ""
+"Portfolio of Tatsuki Okonogi — Dual Degree MBA-MSIS candidate at Baylor "
+"University, joining Hitachi as AI Strategy Staff. Background across GitLab, "
+"Oracle, and Fujitsu."
+msgstr ""
+
+#: templates/base.html:16 templates/base.html:21
+msgid ""
+"MBA-MSIS candidate. Formerly GitLab, Oracle, Fujitsu. Joining Hitachi as AI "
+"Strategy Staff."
+msgstr ""
+
+#: templates/base.html:36
+msgid "TOP"
+msgstr ""
+
+#: templates/base.html:37 templates/profile.html:9
+msgid "PROFILE"
+msgstr ""
+
+#: templates/base.html:38 templates/education.html:8
+msgid "EDUCATION"
+msgstr ""
+
+#: templates/base.html:39 templates/work.html:8
+msgid "WORK"
+msgstr ""
+
+#: templates/base.html:41 templates/hobby.html:9
+msgid "HOBBY"
+msgstr ""
+
+#: templates/base.html:42 templates/contact.html:8
+msgid "CONTACT"
+msgstr ""
+
+#: templates/contact.html:4
+msgid "Contact"
+msgstr ""
+
+#: templates/contact.html:14
+msgid ""
+"I'd love to hear from you — whether it's a project inquiry, a collaboration "
+"opportunity, or just a friendly conversation. Feel free to reach out through "
+"any of the channels below."
+msgstr ""
+
+#: templates/contact.html:19
+msgid "Send email"
+msgstr ""
+
+#: templates/contact.html:20
+msgid "Email"
+msgstr ""
+
+#: templates/contact.html:24
+msgid "LinkedIn profile"
+msgstr ""
+
+#: templates/contact.html:25
+msgid "LinkedIn"
+msgstr ""
+
+#: templates/contact.html:31
+msgid "GitHub profile"
+msgstr ""
+
+#: templates/contact.html:32
+msgid "GitHub"
+msgstr ""
+
+#: templates/education.html:4
+msgid "Education"
+msgstr ""
+
+#: templates/education.html:12
+msgid "Aoyama Gakuin University"
+msgstr ""
+
+#: templates/education.html:13
+msgid "Bachelor of Economics | April 2013 – March 2018"
+msgstr ""
+
+#: templates/education.html:15
+msgid ""
+"Studied macroeconomics, microeconomics, and international trade, building a "
+"foundation in economic theory and global markets."
+msgstr ""
+
+#: templates/education.html:20
+msgid "Baylor University"
+msgstr ""
+
+#: templates/education.html:21
+msgid "Dual Degree MBA-MSIS | July 2024 – May 2026"
+msgstr ""
+
+#: templates/education.html:23
+msgid ""
+"Pursuing a Dual Degree in Business Administration and Management Information "
+"Systems, with a focus on R, Business Intelligence, AI, Python, and SQL — "
+"bridging business strategy with data-driven technology."
+msgstr ""
+
+#: templates/hobby.html:5
+msgid "Hobby"
+msgstr ""
+
+#: templates/hobby.html:12
+msgid ""
+"Football is one of my lifelong passions. In March 2018, I traveled across "
+"Europe to experience legendary stadiums live — Signal Iduna Park in Dortmund "
+"and Santiago Bernabéu in Madrid."
+msgstr ""
+
+#: templates/hobby.html:18
+msgid "Signal Iduna Park · Dortmund, Germany · March 8, 2018"
+msgstr ""
+
+#: templates/hobby.html:23 templates/hobby.html:28
+msgid "Santiago Bernabéu · Madrid, Spain · March 2018"
+msgstr ""
+
+#: templates/profile.html:5
+msgid "Profile"
+msgstr ""
+
+#: templates/profile.html:18
+msgid ""
+"Born in 1994 in Gunma, Japan, I spent about six years in the IT industry, "
+"advising enterprises on AI strategy and DevSecOps as a consultant focused on "
+"AI and application security — helping organizations navigate digital "
+"transformation."
+msgstr ""
+
+#: templates/profile.html:21
+msgid ""
+"I later earned a Dual Degree MBA-MSIS at Baylor University, broadening my "
+"perspective across two continents and multiple industries."
+msgstr ""
+
+#: templates/profile.html:24
+msgid ""
+"After graduation, I will join Hitachi, Ltd. as an AI Strategy Staff, driving "
+"the formulation and execution of enterprise-wide AI strategy."
+msgstr ""
+
+#: templates/profile.html:27
+msgid ""
+"Alongside my career, I teach English and social studies to junior high "
+"school students at a local cram school — because I believe in unlocking "
+"potential at every stage of life."
+msgstr ""
+
+#: templates/top.html:5
+msgid "Home"
+msgstr ""
+
+#: templates/top.html:14
+msgid "WELCOME"
+msgstr ""
+
+#: templates/top.html:15
+msgid ""
+"Unleashing human potential — for companies, professionals, and children — "
+"through AI"
+msgstr ""
+
+#: templates/work.html:4
+msgid "Work History"
+msgstr ""
+
+#: templates/work.html:11
+msgid "Professional Experience"
+msgstr ""
+
+#: templates/work.html:14
+msgid "Account Executive, SMB & Mid-Market"
+msgstr ""
+
+#: templates/work.html:15
+msgid "GitLab Japan — Tokyo | October 2020 – July 2024"
+msgstr ""
+
+#: templates/work.html:17
+#, python-format
+msgid ""
+"I spent three years owning GitLab's SMB and Mid-Market business in Japan — "
+"closing the first AWS and GCP deals in the country, hitting 75%% of annual "
+"quota in a single Q1, and earning an MVP Award at 298%% attainment from the "
+"U.S. team. The numbers I'm still proud of came from slow, deliberate work "
+"with C-level executives, not from a hot market."
+msgstr ""
+
+#: templates/work.html:20
+msgid ""
+"The deals that mattered most to me were the seven-figure ones, where the "
+"conversation was less about DevSecOps features and more about how a company "
+"wanted to build software for the next decade. Working top-down with partners "
+"to reshape modern development architecture is where I learned how big "
+"decisions actually get made inside large enterprises."
+msgstr ""
+
+#: templates/work.html:23
+msgid ""
+"For existing customers, the work shifted from selling to co-designing — "
+"mapping where a team actually was, where it wanted to be, and what AI, CI/"
+"CD, and security practices could take them there. Facilitating workshops "
+"with executives, watching adoption metrics move, and course-correcting over "
+"quarterly reviews taught me that enterprise change is a long game, not a "
+"launch."
+msgstr ""
+
+#: templates/work.html:28
+msgid "Business Development Representative"
+msgstr ""
+
+#: templates/work.html:29
+msgid "Oracle Japan — Tokyo | October 2019 – October 2020"
+msgstr ""
+
+#: templates/work.html:31
+#, python-format
+msgid ""
+"A year of learning pipeline creation the hard way. I finished top of twelve "
+"BDRs in Japan three quarters running (103%%, 114%%, 112%%), but what stuck "
+"with me wasn't the ranking — it was figuring out how to turn cold marketing "
+"leads into real conversations, then handing the playbook to teammates so the "
+"whole floor moved up with me."
+msgstr ""
+
+#: templates/work.html:36
+msgid "Global Marketing Representative"
+msgstr ""
+
+#: templates/work.html:37
+msgid "Fujitsu — Tokyo | April 2018 – October 2019"
+msgstr ""
+
+#: templates/work.html:39
+msgid ""
+"My first real exposure to working across borders. I ran analytics and market "
+"research alongside colleagues in the UK and India to raise Fujitsu's brand "
+"awareness outside Japan, and helped extend a domestically built SAP S/4HANA "
+"business into Europe. It planted the interest in cross-border work that "
+"eventually pulled me toward an MBA in the U.S."
+msgstr ""
+
+#: templates/work.html:44
+msgid "Overseas Marketing Intern"
+msgstr ""
+
+#: templates/work.html:45
+msgid "Panasonic — Tokyo | February 2017 – March 2017"
+msgstr ""
+
+#: templates/work.html:47
+msgid ""
+"A short stint with Panasonic's Overseas Marketing Division — an early look "
+"at how global consumer-electronics strategy is built across time zones, "
+"incentives, and very different internal cultures."
+msgstr ""
+
+#: templates/work.html:51
+msgid "On the Side"
+msgstr ""
+
+#: templates/work.html:54
+msgid "Private Tutor & Cram School Instructor"
+msgstr ""
+
+#: templates/work.html:55
+msgid "English & Social Studies, junior-high students"
+msgstr ""
+
+#: templates/work.html:57
+msgid ""
+"Outside work, I teach English and social studies to junior-high students at "
+"a local cram school. The distance from enterprise sales to thirteen-year-"
+"olds is shorter than it sounds — both ask you to read the room, slow down "
+"when it matters, and believe the person in front of you can go further than "
+"they think they can."
+msgstr ""

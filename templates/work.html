@@ -1,87 +1,60 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Work History - Portfolio{% endblock %}
+{% block title %}{% trans "Work History" %} - {% trans "Portfolio" %}{% endblock %}
 
 {% block content %}
 <div class="page-container">
-    <h1 class="page-title">WORK</h1>
+    <h1 class="page-title">{% trans "WORK" %}</h1>
 
     <div class="work-content">
-        <h2 class="work-section-title">Professional Experience</h2>
+        <h2 class="work-section-title">{% trans "Professional Experience" %}</h2>
 
         <div class="work-item">
-            <h3 class="work-position">Account Executive, SMB &amp; Mid-Market</h3>
-            <p class="work-company">GitLab Japan — Tokyo | October 2020 &ndash; July 2024</p>
+            <h3 class="work-position">{% trans "Account Executive, SMB & Mid-Market" %}</h3>
+            <p class="work-company">{% trans "GitLab Japan — Tokyo | October 2020 – July 2024" %}</p>
             <p class="work-description">
-                I spent three years owning GitLab's SMB and Mid-Market business in Japan
-                — closing the first AWS and GCP deals in the country, hitting 75% of
-                annual quota in a single Q1, and earning an MVP Award at 298% attainment
-                from the U.S. team. The numbers I'm still proud of came from slow,
-                deliberate work with C-level executives, not from a hot market.
+                {% blocktrans %}I spent three years owning GitLab's SMB and Mid-Market business in Japan — closing the first AWS and GCP deals in the country, hitting 75% of annual quota in a single Q1, and earning an MVP Award at 298% attainment from the U.S. team. The numbers I'm still proud of came from slow, deliberate work with C-level executives, not from a hot market.{% endblocktrans %}
             </p>
             <p class="work-description">
-                The deals that mattered most to me were the seven-figure ones, where the
-                conversation was less about DevSecOps features and more about how a
-                company wanted to build software for the next decade. Working top-down
-                with partners to reshape modern development architecture is where I
-                learned how big decisions actually get made inside large enterprises.
+                {% blocktrans %}The deals that mattered most to me were the seven-figure ones, where the conversation was less about DevSecOps features and more about how a company wanted to build software for the next decade. Working top-down with partners to reshape modern development architecture is where I learned how big decisions actually get made inside large enterprises.{% endblocktrans %}
             </p>
             <p class="work-description">
-                For existing customers, the work shifted from selling to co-designing —
-                mapping where a team actually was, where it wanted to be, and what AI,
-                CI/CD, and security practices could take them there. Facilitating
-                workshops with executives, watching adoption metrics move, and course-
-                correcting over quarterly reviews taught me that enterprise change is a
-                long game, not a launch.
+                {% blocktrans %}For existing customers, the work shifted from selling to co-designing — mapping where a team actually was, where it wanted to be, and what AI, CI/CD, and security practices could take them there. Facilitating workshops with executives, watching adoption metrics move, and course-correcting over quarterly reviews taught me that enterprise change is a long game, not a launch.{% endblocktrans %}
             </p>
         </div>
 
         <div class="work-item">
-            <h3 class="work-position">Business Development Representative</h3>
-            <p class="work-company">Oracle Japan — Tokyo | October 2019 &ndash; October 2020</p>
+            <h3 class="work-position">{% trans "Business Development Representative" %}</h3>
+            <p class="work-company">{% trans "Oracle Japan — Tokyo | October 2019 – October 2020" %}</p>
             <p class="work-description">
-                A year of learning pipeline creation the hard way. I finished top of
-                twelve BDRs in Japan three quarters running (103%, 114%, 112%), but what
-                stuck with me wasn't the ranking — it was figuring out how to turn cold
-                marketing leads into real conversations, then handing the playbook to
-                teammates so the whole floor moved up with me.
+                {% blocktrans %}A year of learning pipeline creation the hard way. I finished top of twelve BDRs in Japan three quarters running (103%, 114%, 112%), but what stuck with me wasn't the ranking — it was figuring out how to turn cold marketing leads into real conversations, then handing the playbook to teammates so the whole floor moved up with me.{% endblocktrans %}
             </p>
         </div>
 
         <div class="work-item">
-            <h3 class="work-position">Global Marketing Representative</h3>
-            <p class="work-company">Fujitsu — Tokyo | April 2018 &ndash; October 2019</p>
+            <h3 class="work-position">{% trans "Global Marketing Representative" %}</h3>
+            <p class="work-company">{% trans "Fujitsu — Tokyo | April 2018 – October 2019" %}</p>
             <p class="work-description">
-                My first real exposure to working across borders. I ran analytics and
-                market research alongside colleagues in the UK and India to raise
-                Fujitsu's brand awareness outside Japan, and helped extend a
-                domestically built SAP S/4HANA business into Europe. It planted the
-                interest in cross-border work that eventually pulled me toward an MBA
-                in the U.S.
+                {% blocktrans %}My first real exposure to working across borders. I ran analytics and market research alongside colleagues in the UK and India to raise Fujitsu's brand awareness outside Japan, and helped extend a domestically built SAP S/4HANA business into Europe. It planted the interest in cross-border work that eventually pulled me toward an MBA in the U.S.{% endblocktrans %}
             </p>
         </div>
 
         <div class="work-item">
-            <h3 class="work-position">Overseas Marketing Intern</h3>
-            <p class="work-company">Panasonic — Tokyo | February 2017 &ndash; March 2017</p>
+            <h3 class="work-position">{% trans "Overseas Marketing Intern" %}</h3>
+            <p class="work-company">{% trans "Panasonic — Tokyo | February 2017 – March 2017" %}</p>
             <p class="work-description">
-                A short stint with Panasonic's Overseas Marketing Division — an early
-                look at how global consumer-electronics strategy is built across time
-                zones, incentives, and very different internal cultures.
+                {% blocktrans %}A short stint with Panasonic's Overseas Marketing Division — an early look at how global consumer-electronics strategy is built across time zones, incentives, and very different internal cultures.{% endblocktrans %}
             </p>
         </div>
 
-        <h2 class="work-section-title">On the Side</h2>
+        <h2 class="work-section-title">{% trans "On the Side" %}</h2>
 
         <div class="work-item">
-            <h3 class="work-position">Private Tutor &amp; Cram School Instructor</h3>
-            <p class="work-company">English &amp; Social Studies, junior-high students</p>
+            <h3 class="work-position">{% trans "Private Tutor & Cram School Instructor" %}</h3>
+            <p class="work-company">{% trans "English & Social Studies, junior-high students" %}</p>
             <p class="work-description">
-                Outside work, I teach English and social studies to junior-high students
-                at a local cram school. The distance from enterprise sales to
-                thirteen-year-olds is shorter than it sounds — both ask you to read the
-                room, slow down when it matters, and believe the person in front of you
-                can go further than they think they can.
+                {% blocktrans %}Outside work, I teach English and social studies to junior-high students at a local cram school. The distance from enterprise sales to thirteen-year-olds is shorter than it sounds — both ask you to read the room, slow down when it matters, and believe the person in front of you can go further than they think they can.{% endblocktrans %}
             </p>
         </div>
     </div>

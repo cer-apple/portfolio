@@ -1,29 +1,30 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Profile - Portfolio{% endblock %}
+{% block title %}{% trans "Profile" %} - {% trans "Portfolio" %}{% endblock %}
 
 {% block content %}
 <div class="page-container">
-    <h1 class="page-title">PROFILE</h1>
-    
+    <h1 class="page-title">{% trans "PROFILE" %}</h1>
+
     <div class="profile-content">
         <div class="profile-image">
             <img src="{% static 'main/images/profile-collage.jpg' %}" alt="Profile Collage" class="profile-collage">
         </div>
-        
+
         <div class="profile-bio">
             <p>
-                Born in 1994 in Gunma, Japan, I spent about six years in the IT industry, advising enterprises on AI strategy and DevSecOps as a consultant focused on AI and application security — helping organizations navigate digital transformation.
+                {% blocktrans %}Born in 1994 in Gunma, Japan, I spent about six years in the IT industry, advising enterprises on AI strategy and DevSecOps as a consultant focused on AI and application security — helping organizations navigate digital transformation.{% endblocktrans %}
             </p>
             <p>
-                I later earned a Dual Degree MBA-MSIS at Baylor University, broadening my perspective across two continents and multiple industries.
+                {% blocktrans %}I later earned a Dual Degree MBA-MSIS at Baylor University, broadening my perspective across two continents and multiple industries.{% endblocktrans %}
             </p>
             <p>
-                After graduation, I will join Hitachi, Ltd. as an AI Strategy Staff, driving the formulation and execution of enterprise-wide AI strategy.
+                {% blocktrans %}After graduation, I will join Hitachi, Ltd. as an AI Strategy Staff, driving the formulation and execution of enterprise-wide AI strategy.{% endblocktrans %}
             </p>
             <p>
-                Alongside my career, I teach English and social studies to junior high school students at a local cram school — because I believe in unlocking potential at every stage of life.
+                {% blocktrans %}Alongside my career, I teach English and social studies to junior high school students at a local cram school — because I believe in unlocking potential at every stage of life.{% endblocktrans %}
             </p>
         </div>
     </div>

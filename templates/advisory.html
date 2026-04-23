@@ -1,27 +1,28 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Advisory & Consulting - Portfolio{% endblock %}
+{% block title %}{% trans "Advisory & Consulting" %} - {% trans "Portfolio" %}{% endblock %}
 
 {% block content %}
 <div class="page-container">
-    <h1 class="page-title">ADVISORY</h1>
+    <h1 class="page-title">{% trans "ADVISORY" %}</h1>
 
     <div class="advisory-summary">
         <p class="advisory-catchphrase">
-            Drawing on enterprise experience at global firms<br>
+            {% blocktrans %}Drawing on enterprise experience at global firms<br>
             and a fluent command of AI-era technology —<br>
             I help individuals shape their careers<br>
-            and companies drive meaningful transformation.
+            and companies drive meaningful transformation.{% endblocktrans %}
         </p>
 
         <div class="advisory-note">
-            <p>Personal advisory</p>
-            <p>Corporate consulting</p>
-            <p>Flexible engagements tailored to your goals.</p>
-            <p>Feel free to reach out.</p>
+            <p>{% trans "Personal advisory" %}</p>
+            <p>{% trans "Corporate consulting" %}</p>
+            <p>{% trans "Flexible engagements tailored to your goals." %}</p>
+            <p>{% trans "Feel free to reach out." %}</p>
         </div>
 
-        <a href="{% url 'advisory_detail' %}" class="advisory-link">See full services &amp; pricing &rarr;</a>
+        <a href="{% url 'advisory_detail' %}" class="advisory-link">{% trans "See full services & pricing →" %}</a>
     </div>
 </div>
 {% endblock %}

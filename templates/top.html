@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Home - Portfolio{% endblock %}
+{% block title %}{% trans "Home" %} - {% trans "Portfolio" %}{% endblock %}
 
 {% block content %}
 <section class="hero">
@@ -10,8 +11,8 @@
             <img src="{% static 'main/images/portrait.jpg' %}" alt="Portrait" class="portrait">
         </div>
         <div class="hero-text">
-            <h1 class="hero-title">WELCOME</h1>
-            <p class="hero-subtitle">Unleashing human potential — for companies, professionals, and children — through AI</p>
+            <h1 class="hero-title">{% trans "WELCOME" %}</h1>
+            <p class="hero-subtitle">{% trans "Unleashing human potential — for companies, professionals, and children — through AI" %}</p>
         </div>
     </div>
 </section>

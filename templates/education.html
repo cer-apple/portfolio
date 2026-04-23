@@ -1,28 +1,26 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Education - Portfolio{% endblock %}
+{% block title %}{% trans "Education" %} - {% trans "Portfolio" %}{% endblock %}
 
 {% block content %}
 <div class="page-container">
-    <h1 class="page-title">EDUCATION</h1>
-    
+    <h1 class="page-title">{% trans "EDUCATION" %}</h1>
+
     <div class="education-content">
         <div class="education-item">
-            <h2 class="education-school">Aoyama Gakuin University</h2>
-            <p class="education-degree">Bachelor of Economics | April 2013 – March 2018</p>
+            <h2 class="education-school">{% trans "Aoyama Gakuin University" %}</h2>
+            <p class="education-degree">{% trans "Bachelor of Economics | April 2013 – March 2018" %}</p>
             <p class="education-description">
-                Studied macroeconomics, microeconomics, and international trade, 
-                building a foundation in economic theory and global markets.
+                {% blocktrans %}Studied macroeconomics, microeconomics, and international trade, building a foundation in economic theory and global markets.{% endblocktrans %}
             </p>
         </div>
-        
+
         <div class="education-item">
-            <h2 class="education-school">Baylor University</h2>
-            <p class="education-degree">Dual Degree MBA-MSIS | July 2024 – May 2026</p>
+            <h2 class="education-school">{% trans "Baylor University" %}</h2>
+            <p class="education-degree">{% trans "Dual Degree MBA-MSIS | July 2024 – May 2026" %}</p>
             <p class="education-description">
-                Pursuing a Dual Degree in Business Administration and Management 
-                Information Systems, with a focus on R, Business Intelligence, 
-                AI, Python, and SQL — bridging business strategy with data-driven technology.
+                {% blocktrans %}Pursuing a Dual Degree in Business Administration and Management Information Systems, with a focus on R, Business Intelligence, AI, Python, and SQL — bridging business strategy with data-driven technology.{% endblocktrans %}
             </p>
         </div>
     </div>

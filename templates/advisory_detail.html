@@ -1,18 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Service Charge - Advisory & Consulting{% endblock %}
+{% block title %}{% trans "Service Charge" %} - {% trans "Advisory & Consulting" %}{% endblock %}
 
 {% block content %}
 <div class="page-container advisory-detail">
     <div class="advisory-detail-header">
         <div class="advisory-detail-heading">
             <nav class="advisory-breadcrumb" aria-label="Breadcrumb">
-                <a href="{% url 'advisory' %}">Advisory</a>
+                <a href="{% url 'advisory' %}">{% trans "Advisory" %}</a>
                 <span>&rsaquo;</span>
-                <span>Service Charge</span>
+                <span>{% trans "Service Charge" %}</span>
             </nav>
-            <h1 class="advisory-detail-title">Service Charge</h1>
+            <h1 class="advisory-detail-title">{% trans "Service Charge" %}</h1>
         </div>
         <div class="advisory-detail-portrait" aria-hidden="true">
             <img src="{% static 'main/images/portrait.jpg' %}" alt="Tatsuki Okonogi portrait">
@@ -21,39 +22,39 @@
 
     <section class="advisory-detail-section">
         <h2 class="advisory-detail-section-title">
-            Personal Advisory<span class="advisory-detail-section-tag">For Individuals</span>
+            {% trans "Personal Advisory" %}<span class="advisory-detail-section-tag">{% trans "For Individuals" %}</span>
         </h2>
 
         <div class="advisory-services-grid">
             <article class="advisory-service">
                 <h3 class="advisory-service-name">GRE / GMAT Consulting</h3>
-                <p class="advisory-service-price">60 min &mdash; from &yen;15,000</p>
+                <p class="advisory-service-price">{% blocktrans %}60 min — from ¥15,000{% endblocktrans %}</p>
                 <p class="advisory-service-desc">
-                    For applicants to MBA and graduate programs abroad. End-to-end support from score-improvement strategy through study-plan design.
+                    {% blocktrans %}For applicants to MBA and graduate programs abroad. End-to-end support from score-improvement strategy through study-plan design.{% endblocktrans %}
                 </p>
             </article>
 
             <article class="advisory-service">
                 <h3 class="advisory-service-name">MBA Application Advisory</h3>
-                <p class="advisory-service-price">Single session: 60 min &mdash; from &yen;20,000 &nbsp;/&nbsp; Full application package: upon request</p>
+                <p class="advisory-service-price">{% blocktrans %}Single session: 60 min — from ¥20,000 &nbsp;/&nbsp; Full application package: upon request{% endblocktrans %}</p>
                 <p class="advisory-service-desc">
-                    Strategic guidance for top-MBA applicants &mdash; school selection, Why School / Why MBA sparring, and recommendation-letter strategy.
+                    {% blocktrans %}Strategic guidance for top-MBA applicants — school selection, Why School / Why MBA sparring, and recommendation-letter strategy.{% endblocktrans %}
                 </p>
             </article>
 
             <article class="advisory-service">
                 <h3 class="advisory-service-name">Application Essay Editing</h3>
-                <p class="advisory-service-price">Per essay &mdash; from &yen;10,000</p>
+                <p class="advisory-service-price">{% blocktrans %}Per essay — from ¥10,000{% endblocktrans %}</p>
                 <p class="advisory-service-desc">
-                    Editing and structural feedback on MBA and graduate-school essays, polished to a native-level standard of logic and flow.
+                    {% blocktrans %}Editing and structural feedback on MBA and graduate-school essays, polished to a native-level standard of logic and flow.{% endblocktrans %}
                 </p>
             </article>
 
             <article class="advisory-service">
                 <h3 class="advisory-service-name">IELTS Online Lessons</h3>
-                <p class="advisory-service-price">45 min &mdash; &yen;8,000 (continuing-student discount available on request)</p>
+                <p class="advisory-service-price">{% blocktrans %}45 min — ¥8,000 (continuing-student discount available on request){% endblocktrans %}</p>
                 <p class="advisory-service-desc">
-                    Weekly 45-minute 1-on-1 lessons with a curriculum built backward from your target score.
+                    {% blocktrans %}Weekly 45-minute 1-on-1 lessons with a curriculum built backward from your target score.{% endblocktrans %}
                 </p>
             </article>
         </div>
@@ -61,35 +62,35 @@
 
     <section class="advisory-detail-section">
         <h2 class="advisory-detail-section-title">
-            Corporate Consulting<span class="advisory-detail-section-tag">For Companies</span>
+            {% trans "Corporate Consulting" %}<span class="advisory-detail-section-tag">{% trans "For Companies" %}</span>
         </h2>
 
         <div class="advisory-services-grid">
             <article class="advisory-service">
                 <h3 class="advisory-service-name">DX Consulting</h3>
-                <p class="advisory-service-price">60 min &mdash; from &yen;50,000 &nbsp;/&nbsp; Monthly retainer &mdash; from &yen;300,000</p>
+                <p class="advisory-service-price">{% blocktrans %}60 min — from ¥50,000 &nbsp;/&nbsp; Monthly retainer — from ¥300,000{% endblocktrans %}</p>
                 <p class="advisory-service-desc">
-                    Drawing on 6+ years of enterprise-sales experience at global firms, I partner with teams end-to-end &mdash; from DX strategy through on-the-ground implementation.
+                    {% blocktrans %}Drawing on 6+ years of enterprise-sales experience at global firms, I partner with teams end-to-end — from DX strategy through on-the-ground implementation.{% endblocktrans %}
                 </p>
             </article>
 
             <article class="advisory-service">
                 <h3 class="advisory-service-name">AI Enablement</h3>
-                <p class="advisory-service-price">Project-based engagement &mdash; upon request</p>
+                <p class="advisory-service-price">{% trans "Project-based engagement — upon request" %}</p>
                 <p class="advisory-service-desc">
-                    Automating repetitive workflows with Python, and introducing AI-assisted &ldquo;vibe coding&rdquo; development processes powered by Claude and similar models.
+                    {% blocktrans %}Automating repetitive workflows with Python, and introducing AI-assisted "vibe coding" development processes powered by Claude and similar models.{% endblocktrans %}
                 </p>
             </article>
         </div>
     </section>
 
     <section class="advisory-contact">
-        <h2 class="advisory-contact-title">Get in Touch</h2>
+        <h2 class="advisory-contact-title">{% trans "Get in Touch" %}</h2>
         <p class="advisory-contact-desc">
-            Whether you&rsquo;re an individual or a company, feel free to reach out.<br>
-            I&rsquo;ll respond within 48 hours.
+            {% blocktrans %}Whether you're an individual or a company, feel free to reach out.<br>
+            I'll respond within 48 hours.{% endblocktrans %}
         </p>
-        <a href="{{ contact_form_url }}" target="_blank" rel="noopener noreferrer" class="contact-button">Contact Us</a>
+        <a href="{{ contact_form_url }}" target="_blank" rel="noopener noreferrer" class="contact-button">{% trans "Contact Us" %}</a>
     </section>
 </div>
 {% endblock %}

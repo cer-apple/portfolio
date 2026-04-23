@@ -1,22 +1,24 @@
 {% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Tatsuki Okonogi — Portfolio{% endblock %}</title>
+    <title>{% block title %}{% trans "Tatsuki Okonogi — Portfolio" %}{% endblock %}</title>
 
-    <meta name="description" content="{% block meta_description %}Portfolio of Tatsuki Okonogi — Dual Degree MBA-MSIS candidate at Baylor University, joining Hitachi as AI Strategy Staff. Background across GitLab, Oracle, and Fujitsu.{% endblock %}">
+    <meta name="description" content="{% block meta_description %}{% trans "Portfolio of Tatsuki Okonogi — Dual Degree MBA-MSIS candidate at Baylor University, joining Hitachi as AI Strategy Staff. Background across GitLab, Oracle, and Fujitsu." %}{% endblock %}">
     <meta name="author" content="Tatsuki Okonogi">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{% block og_title %}Tatsuki Okonogi — Portfolio{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}MBA-MSIS candidate. Formerly GitLab, Oracle, Fujitsu. Joining Hitachi as AI Strategy Staff.{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}{% trans "Tatsuki Okonogi — Portfolio" %}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{% trans "MBA-MSIS candidate. Formerly GitLab, Oracle, Fujitsu. Joining Hitachi as AI Strategy Staff." %}{% endblock %}">
     <meta property="og:image" content="{% static 'main/images/portrait.jpg' %}">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% block twitter_title %}Tatsuki Okonogi — Portfolio{% endblock %}">
-    <meta name="twitter:description" content="{% block twitter_description %}MBA-MSIS candidate. Formerly GitLab, Oracle, Fujitsu. Joining Hitachi as AI Strategy Staff.{% endblock %}">
+    <meta name="twitter:title" content="{% block twitter_title %}{% trans "Tatsuki Okonogi — Portfolio" %}{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}{% trans "MBA-MSIS candidate. Formerly GitLab, Oracle, Fujitsu. Joining Hitachi as AI Strategy Staff." %}{% endblock %}">
     <meta name="twitter:image" content="{% static 'main/images/portrait.jpg' %}">
 
     <link rel="icon" type="image/svg+xml" href="{% static 'main/images/favicon.svg' %}">
@@ -31,14 +33,19 @@
     <nav class="navbar">
         <div class="nav-container">
             <ul class="nav-menu">
-                <li><a href="{% url 'top' %}" class="nav-link{% if active == 'top' %} active{% endif %}">TOP</a></li>
-                <li><a href="{% url 'profile' %}" class="nav-link{% if active == 'profile' %} active{% endif %}">PROFILE</a></li>
-                <li><a href="{% url 'education' %}" class="nav-link{% if active == 'education' %} active{% endif %}">EDUCATION</a></li>
-                <li><a href="{% url 'work' %}" class="nav-link{% if active == 'work' %} active{% endif %}">WORK</a></li>
-                <li><a href="{% url 'advisory' %}" class="nav-link{% if active == 'advisory' or active == 'advisory_detail' %} active{% endif %}">ADVISORY</a></li>
-                <li><a href="{% url 'hobby' %}" class="nav-link{% if active == 'hobby' %} active{% endif %}">HOBBY</a></li>
-                <li><a href="{% url 'contact' %}" class="nav-link{% if active == 'contact' %} active{% endif %}">CONTACT</a></li>
+                <li><a href="{% url 'top' %}" class="nav-link{% if active == 'top' %} active{% endif %}">{% trans "TOP" %}</a></li>
+                <li><a href="{% url 'profile' %}" class="nav-link{% if active == 'profile' %} active{% endif %}">{% trans "PROFILE" %}</a></li>
+                <li><a href="{% url 'education' %}" class="nav-link{% if active == 'education' %} active{% endif %}">{% trans "EDUCATION" %}</a></li>
+                <li><a href="{% url 'work' %}" class="nav-link{% if active == 'work' %} active{% endif %}">{% trans "WORK" %}</a></li>
+                <li><a href="{% url 'advisory' %}" class="nav-link{% if active == 'advisory' or active == 'advisory_detail' %} active{% endif %}">{% trans "ADVISORY" %}</a></li>
+                <li><a href="{% url 'hobby' %}" class="nav-link{% if active == 'hobby' %} active{% endif %}">{% trans "HOBBY" %}</a></li>
+                <li><a href="{% url 'contact' %}" class="nav-link{% if active == 'contact' %} active{% endif %}">{% trans "CONTACT" %}</a></li>
             </ul>
+            <div class="lang-switcher" aria-label="Language switcher">
+                {% language 'en' %}<a href="{% url request.resolver_match.url_name %}" class="lang-link{% if LANGUAGE_CODE == 'en' %} active{% endif %}">EN</a>{% endlanguage %}
+                <span class="lang-sep">/</span>
+                {% language 'ja' %}<a href="{% url request.resolver_match.url_name %}" class="lang-link{% if LANGUAGE_CODE == 'ja' %} active{% endif %}">JP</a>{% endlanguage %}
+            </div>
         </div>
     </nav>
     {% endwith %}
