@@ -54,7 +54,7 @@
             <h3 class="work-position">{% trans "Private Tutor & Cram School Instructor" %}</h3>
             <p class="work-company">{% trans "English & Social Studies, junior-high students" %}</p>
             <p class="work-description">
-                {% blocktrans %}Outside work, I teach English and social studies to junior-high students at a local cram school. The distance from enterprise sales to thirteen-year-olds is shorter than it sounds — both ask you to read the room, slow down when it matters, and believe the person in front of you can go further than they think they can.{% endblocktrans %}
+                {% blocktrans with cram_url="https://map.yahoo.co.jp/v3/place/K7ZzGd28VGM" %}Outside work, I teach English and social studies to junior-high students at a local cram school (<a href="{{ cram_url }}" target="_blank" rel="noopener noreferrer" class="work-link">CER</a>). The distance from enterprise sales to thirteen-year-olds is shorter than it sounds — both ask you to read the room, slow down when it matters, and believe the person in front of you can go further than they think they can.{% endblocktrans %}
             </p>
         </div>
     </div>
