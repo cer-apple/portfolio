@@ -105,7 +105,61 @@ python manage.py collectstatic
 
 See [requirements.txt](requirements.txt) for pinned versions.
 
+## Deployment
+
+This project ships with a Render Blueprint ([render.yaml](render.yaml)) that provisions a free web service plus a free PostgreSQL database in one click.
+
+### Architecture
+
+| Layer | Local dev | Render |
+| --- | --- | --- |
+| WSGI server | `runserver` | `gunicorn portfolio.wsgi:application` |
+| Static files | Django dev server | WhiteNoise (compressed + manifest) |
+| Database | SQLite (`db.sqlite3`) | Managed PostgreSQL |
+| Settings | reads `.env` (optional) | reads Render env vars |
+| `DEBUG` | `True` | `False` |
+
+### Environment variables
+
+Settings come from environment variables via [python-decouple](https://github.com/HBNetwork/python-decouple). See [.env.example](.env.example) for the full list.
+
+| Variable | Required | Notes |
+| --- | --- | --- |
+| `SECRET_KEY` | prod | Render auto-generates this when using the Blueprint. |
+| `DEBUG` | always | Defaults to `False`. Set to `True` only locally. |
+| `ALLOWED_HOSTS` | always | Defaults to `localhost,127.0.0.1,.onrender.com`. |
+| `DATABASE_URL` | prod | Auto-injected by Render's Postgres add-on. Falls back to SQLite if unset. |
+| `CSRF_TRUSTED_ORIGINS` | optional | Defaults to `https://*.onrender.com`. |
+| `WEB_CONCURRENCY` | optional | Number of gunicorn workers. Default 4 in `render.yaml`. |
+
+### Deploy to Render
+
+1. Push this repo to GitHub.
+2. In the Render dashboard, click **New → Blueprint** and connect the repo.
+3. Render reads [render.yaml](render.yaml), provisions the database, and runs [build.sh](build.sh).
+4. First deploy takes ~5 min. Subsequent pushes to `main` redeploy automatically.
+
+### Build pipeline
+
+[build.sh](build.sh) runs on every deploy:
+
+```bash
+pip install -r requirements.txt
+python manage.py collectstatic --no-input   # WhiteNoise needs this
+python manage.py compilemessages            # builds .mo from locale/*/django.po
+python manage.py migrate --no-input
+```
+
+### Local production-mode smoke test
+
+```bash
+DEBUG=False SECRET_KEY=test ALLOWED_HOSTS=localhost,127.0.0.1 \
+  python manage.py collectstatic --no-input
+DEBUG=False SECRET_KEY=test ALLOWED_HOSTS=localhost,127.0.0.1 \
+  gunicorn portfolio.wsgi:application
+```
+
 ## Notes
 
-- This is a development setup. For production, use Gunicorn or similar and set `DEBUG = False`, a proper `SECRET_KEY`, and `ALLOWED_HOSTS` in [portfolio/settings.py](portfolio/settings.py).
 - Portrait image lives at `main/static/main/images/portrait.jpg`; replace to customize.
+- After editing template strings or `locale/*/django.po`, run `python manage.py compilemessages` and restart the server.
