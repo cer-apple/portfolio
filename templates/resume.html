@@ -5,8 +5,7 @@
 {% block title %}{% trans "Resume" %} - {% trans "Portfolio" %}{% endblock %}
 
 {% block content %}
-{% with resume_url=request.scheme|add:"://"|add:request.get_host|add:"/static/main/resume/Okonogi_Tatsuki_Resume.pdf" %}
-<div class="page-container">
+<div class="page-container resume-page">
     <h1 class="page-title">{% trans "RESUME" %}</h1>
 
     <p class="resume-intro">
@@ -46,5 +45,4 @@
         </a>
     </div>
 </div>
-{% endwith %}
 {% endblock %}

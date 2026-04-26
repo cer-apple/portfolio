@@ -126,6 +126,7 @@ body {
 
 .page-container {
     max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
     padding: 60px 20px;
 }
@@ -1372,7 +1373,11 @@ body {
     color: #888;
 }
 
-/* Resume page */
+/* Resume page — wider container so the embedded PDF has room to breathe */
+.resume-page {
+    max-width: 1200px;
+}
+
 .resume-intro {
     max-width: 720px;
     margin: 0 auto 30px;
