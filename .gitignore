@@ -134,4 +134,5 @@ Thumbs.db
 
 # Static and Media files
 staticfiles/
-media/
+media/*
+!media/projects/
