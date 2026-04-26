@@ -1373,6 +1373,105 @@ body {
     color: #888;
 }
 
+/* 404 page */
+.error-page {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.error-page .page-title {
+    font-size: 120px;
+    color: var(--accent-orange);
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #ccc;
+    font-size: 18px;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .error-page .page-title {
+        font-size: 80px;
+    }
+}
+
+/* Site footer */
+.site-footer {
+    border-top: 1px solid #222;
+    background-color: #050505;
+    padding: 40px 20px 30px;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.footer-tagline {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-orange);
+}
+
+.footer-copyright {
+    color: #555;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        gap: 16px;
+    }
+    .footer-name {
+        font-size: 18px;
+    }
+}
+
 /* Resume page — wider container so the embedded PDF has room to breathe */
 .resume-page {
     max-width: 1200px;

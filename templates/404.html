@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Page Not Found" %} - {% trans "Portfolio" %}{% endblock %}
+
+{% block content %}
+<div class="page-container error-page">
+    <h1 class="page-title">404</h1>
+    <p class="error-message">
+        {% blocktrans %}The page you're looking for doesn't exist or has been moved.{% endblocktrans %}
+    </p>
+    <div class="error-actions">
+        <a href="{% url 'top' %}" class="resume-btn resume-btn--primary">{% trans "Back to Home" %}</a>
+        <a href="{% url 'projects' %}" class="resume-btn resume-btn--secondary">{% trans "View Projects" %}</a>
+    </div>
+</div>
+{% endblock %}

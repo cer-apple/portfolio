@@ -574,3 +574,23 @@ msgid ""
 msgstr ""
 "PDF はデスクトップ環境での閲覧を推奨しています。モバイルでは下のボタンから"
 "ダウンロード・閲覧してください。"
+
+# --- Footer ---
+msgid "MBA-MSIS · Baylor University · Hitachi-bound AI Strategy Staff"
+msgstr "MBA-MSIS · Baylor 大学 · 日立 AI 戦略部門 内定"
+
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+# --- 404 page ---
+msgid "Page Not Found"
+msgstr "ページが見つかりません"
+
+msgid "The page you're looking for doesn't exist or has been moved."
+msgstr "お探しのページは存在しないか、移動されました。"
+
+msgid "Back to Home"
+msgstr "ホームへ戻る"
+
+msgid "View Projects"
+msgstr "プロジェクトを見る"
