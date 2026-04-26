@@ -897,6 +897,28 @@ body {
     filter: grayscale(0%);
 }
 
+.project-card-image-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+}
+
+.project-card-image-icon img {
+    width: auto;
+    height: 70%;
+    max-width: 80%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.project-card:hover .project-card-image-icon img {
+    filter: grayscale(0%);
+}
+
 .project-card-placeholder {
     width: 100%;
     height: 100%;
@@ -1082,6 +1104,20 @@ body {
 /* Chat demo (Tatsuki AI Assistant) */
 .project-detail-chat-section {
     margin-top: 40px;
+}
+
+.chat-section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chat-section-icon {
+    height: 1.5em;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
 }
 
 .project-detail-chat-intro {

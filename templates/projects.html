@@ -18,6 +18,10 @@
                         <img src="{% static 'main/images/ml-diabetes-regression.png' %}" alt="{% trans 'Diabetes dataset — linear regression scatter plot' %}">
                         <img src="{% static 'main/images/ml-iris-confusion.png' %}" alt="{% trans 'Iris dataset — KNN confusion matrix' %}">
                     </div>
+                {% elif project.category == 'chatbot' %}
+                    <div class="project-card-image-icon">
+                        <img src="{% static 'main/images/chatbot-icon.jpeg' %}" alt="{{ project.title }}">
+                    </div>
                 {% elif project.image %}
                     <img src="{{ project.image.url }}" alt="{{ project.title }}">
                 {% else %}

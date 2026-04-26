@@ -74,7 +74,10 @@
 
     {% if project.category == 'chatbot' %}
     <section class="project-detail-section project-detail-chat-section">
-        <h2 class="project-detail-section-title">{% trans "Live Demo — Tatsuki AI Assistant" %}</h2>
+        <h2 class="project-detail-section-title chat-section-title">
+            <img src="{% static 'main/images/chatbot-icon.jpeg' %}" alt="" class="chat-section-icon">
+            <span>{% trans "Live Demo — Tatsuki AI Assistant" %}</span>
+        </h2>
         <p class="project-detail-text project-detail-chat-intro">{% trans "Ask me anything about Tatsuki — career, skills, interests. Replies in English or 日本語." %}</p>
         <div id="tatsuki-chat"
              class="chat-window"
