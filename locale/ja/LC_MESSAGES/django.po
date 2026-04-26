@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: portfolio 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-23 00:20+0000\n"
+"POT-Creation-Date: 2026-04-26 04:05+0000\n"
 "PO-Revision-Date: 2026-04-22 00:00+0000\n"
 "Last-Translator: Tatsuki Okonogi\n"
 "Language-Team: Japanese\n"
@@ -16,21 +16,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: templates/advisory.html:4 templates/advisory_detail.html:5
 msgid "Advisory & Consulting"
 msgstr "アドバイザリー & コンサルティング"
 
-#: templates/advisory.html:4 templates/contact.html:4
-#: templates/education.html:4 templates/hobby.html:5 templates/profile.html:5
-#: templates/top.html:5 templates/work.html:4
 msgid "Portfolio"
 msgstr "ポートフォリオ"
 
-#: templates/advisory.html:8 templates/base.html:40
 msgid "ADVISORY"
 msgstr "ADVISORY"
 
-#: templates/advisory.html:12
 msgid ""
 "Drawing on enterprise experience at global firms<br>\n"
 "            and a fluent command of AI-era technology —<br>\n"
@@ -42,48 +36,36 @@ msgstr ""
 "            個人のキャリア形成と、<br>\n"
 "            企業の本質的な変革をご支援します。"
 
-#: templates/advisory.html:19
 msgid "Personal advisory"
 msgstr "個人向けアドバイザリー"
 
-#: templates/advisory.html:20
 msgid "Corporate consulting"
 msgstr "法人向けコンサルティング"
 
-#: templates/advisory.html:21
 msgid "Flexible engagements tailored to your goals."
 msgstr "ご相談内容に応じて、柔軟にご対応いたします。"
 
-#: templates/advisory.html:22
 msgid "Feel free to reach out."
 msgstr "お気軽にお問い合わせください。"
 
-#: templates/advisory.html:25
 msgid "See full services & pricing →"
 msgstr "サービス内容と料金の詳細はこちら →"
 
-#: templates/advisory_detail.html:5 templates/advisory_detail.html:14
-#: templates/advisory_detail.html:16
 msgid "Service Charge"
 msgstr "サービス料金"
 
-#: templates/advisory_detail.html:12
 msgid "Advisory"
 msgstr "アドバイザリー"
 
-#: templates/advisory_detail.html:25
 msgid "Personal Advisory"
 msgstr "個人向けアドバイザリー"
 
-#: templates/advisory_detail.html:25
 msgid "For Individuals"
 msgstr "For Individuals"
 
-#: templates/advisory_detail.html:31
 msgid "60 min — from ¥15,000"
 msgstr "60分 — ¥15,000〜"
 
-#: templates/advisory_detail.html:33
 msgid ""
 "For applicants to MBA and graduate programs abroad. End-to-end support from "
 "score-improvement strategy through study-plan design."
@@ -91,7 +73,6 @@ msgstr ""
 "海外MBA・大学院受験者向け。スコアアップ戦略の立案から学習計画の設計まで、一気"
 "通貫でサポートします。"
 
-#: templates/advisory_detail.html:39
 msgid ""
 "Single session: 60 min — from ¥20,000 &nbsp;/&nbsp; Full application "
 "package: upon request"
@@ -99,7 +80,6 @@ msgstr ""
 "単発セッション: 60分 — ¥20,000〜 &nbsp;/&nbsp; 出願パッケージ一式: 別途お見積"
 "り"
 
-#: templates/advisory_detail.html:41
 msgid ""
 "Strategic guidance for top-MBA applicants — school selection, Why School / "
 "Why MBA sparring, and recommendation-letter strategy."
@@ -107,11 +87,9 @@ msgstr ""
 "トップMBA志望者への戦略的サポート — 出願校選定、Why School / Why MBA の壁打"
 "ち、推薦状戦略までを支援します。"
 
-#: templates/advisory_detail.html:47
 msgid "Per essay — from ¥10,000"
 msgstr "1エッセイあたり — ¥10,000〜"
 
-#: templates/advisory_detail.html:49
 msgid ""
 "Editing and structural feedback on MBA and graduate-school essays, polished "
 "to a native-level standard of logic and flow."
@@ -119,11 +97,9 @@ msgstr ""
 "MBA・大学院出願エッセイの構成チェックと添削。ネイティブ水準のロジックと流れに"
 "磨き上げます。"
 
-#: templates/advisory_detail.html:55
 msgid "45 min — ¥8,000 (continuing-student discount available on request)"
 msgstr "45分 — ¥8,000（継続割引あり・別途ご相談）"
 
-#: templates/advisory_detail.html:57
 msgid ""
 "Weekly 45-minute 1-on-1 lessons with a curriculum built backward from your "
 "target score."
@@ -131,19 +107,15 @@ msgstr ""
 "週1回・45分のマンツーマンレッスン。目標スコアから逆算したカリキュラムを設計し"
 "ます。"
 
-#: templates/advisory_detail.html:65
 msgid "Corporate Consulting"
 msgstr "法人向けコンサルティング"
 
-#: templates/advisory_detail.html:65
 msgid "For Companies"
 msgstr "For Companies"
 
-#: templates/advisory_detail.html:71
 msgid "60 min — from ¥50,000 &nbsp;/&nbsp; Monthly retainer — from ¥300,000"
 msgstr "60分 — ¥50,000〜 &nbsp;/&nbsp; 月額顧問契約 — ¥300,000〜"
 
-#: templates/advisory_detail.html:73
 msgid ""
 "Drawing on 6+ years of enterprise-sales experience at global firms, I "
 "partner with teams end-to-end — from DX strategy through on-the-ground "
@@ -152,11 +124,9 @@ msgstr ""
 "グローバル企業での6年以上にわたる法人営業経験を活かし、DX戦略の立案から現場で"
 "の実装まで、一気通貫で伴走します。"
 
-#: templates/advisory_detail.html:79
 msgid "Project-based engagement — upon request"
 msgstr "プロジェクト単位 — 別途お見積り"
 
-#: templates/advisory_detail.html:81
 msgid ""
 "Automating repetitive workflows with Python, and introducing AI-assisted "
 "\"vibe coding\" development processes powered by Claude and similar models."
@@ -164,11 +134,9 @@ msgstr ""
 "Pythonによる定型業務の自動化、ならびにClaudeをはじめとするAIを活用した「Vibe "
 "Coding」型の開発プロセス導入をご支援します。"
 
-#: templates/advisory_detail.html:88 templates/contact.html:12
 msgid "Get in Touch"
 msgstr "お問い合わせ"
 
-#: templates/advisory_detail.html:90
 msgid ""
 "Whether you're an individual or a company, feel free to reach out.<br>\n"
 "            I'll respond within 48 hours."
@@ -176,15 +144,12 @@ msgstr ""
 "個人・法人を問わず、お気軽にお問い合わせください。<br>\n"
 "            48時間以内にご返信いたします。"
 
-#: templates/advisory_detail.html:93
 msgid "Contact Us"
 msgstr "お問い合わせはこちら"
 
-#: templates/base.html:9 templates/base.html:15 templates/base.html:20
 msgid "Tatsuki Okonogi — Portfolio"
 msgstr "小此木 達樹 — ポートフォリオ"
 
-#: templates/base.html:11
 msgid ""
 "Portfolio of Tatsuki Okonogi — Dual Degree MBA-MSIS candidate at Baylor "
 "University, joining Hitachi as AI Strategy Staff. Background across GitLab, "
@@ -194,7 +159,6 @@ msgstr ""
 "籍。卒業後は株式会社日立製作所にAI戦略スタッフとして入社予定。GitLab・"
 "Oracle・富士通でのキャリアを経て現在に至る。"
 
-#: templates/base.html:16 templates/base.html:21
 msgid ""
 "MBA-MSIS candidate. Formerly GitLab, Oracle, Fujitsu. Joining Hitachi as AI "
 "Strategy Staff."
@@ -202,35 +166,30 @@ msgstr ""
 "MBA-MSIS デュアルディグリー在籍。GitLab・Oracle・富士通を経て、日立製作所にAI"
 "戦略スタッフとして入社予定。"
 
-#: templates/base.html:36
 msgid "TOP"
 msgstr "TOP"
 
-#: templates/base.html:37 templates/profile.html:9
 msgid "PROFILE"
 msgstr "PROFILE"
 
-#: templates/base.html:38 templates/education.html:8
 msgid "EDUCATION"
 msgstr "EDUCATION"
 
-#: templates/base.html:39 templates/work.html:8
 msgid "WORK"
 msgstr "WORK"
 
-#: templates/base.html:41 templates/hobby.html:9
+msgid "PROJECTS"
+msgstr "PROJECTS"
+
 msgid "HOBBY"
 msgstr "HOBBY"
 
-#: templates/base.html:42 templates/contact.html:8
 msgid "CONTACT"
 msgstr "CONTACT"
 
-#: templates/contact.html:4
 msgid "Contact"
 msgstr "お問い合わせ"
 
-#: templates/contact.html:14
 msgid ""
 "I'd love to hear from you — whether it's a project inquiry, a collaboration "
 "opportunity, or just a friendly conversation. Feel free to reach out through "
@@ -240,43 +199,33 @@ msgstr ""
 "内容でもお気軽にお声がけください。下記のいずれの窓口からでもご連絡いただけま"
 "す。"
 
-#: templates/contact.html:19
 msgid "Send email"
 msgstr "メールを送る"
 
-#: templates/contact.html:20
 msgid "Email"
 msgstr "Email"
 
-#: templates/contact.html:24
 msgid "LinkedIn profile"
 msgstr "LinkedIn プロフィール"
 
-#: templates/contact.html:25
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: templates/contact.html:31
 msgid "GitHub profile"
 msgstr "GitHub プロフィール"
 
-#: templates/contact.html:32
 msgid "GitHub"
 msgstr "GitHub"
 
-#: templates/education.html:4
 msgid "Education"
 msgstr "学歴"
 
-#: templates/education.html:12
 msgid "Aoyama Gakuin University"
 msgstr "青山学院大学"
 
-#: templates/education.html:13
 msgid "Bachelor of Economics | April 2013 – March 2018"
 msgstr "経済学部 経済学士 | 2013年4月 – 2018年3月"
 
-#: templates/education.html:15
 msgid ""
 "Studied macroeconomics, microeconomics, and international trade, building a "
 "foundation in economic theory and global markets."
@@ -284,15 +233,12 @@ msgstr ""
 "マクロ経済学・ミクロ経済学・国際貿易論を専攻し、経済理論とグローバル市場の基"
 "礎を体系的に学びました。"
 
-#: templates/education.html:20
 msgid "Baylor University"
 msgstr "Baylor University"
 
-#: templates/education.html:21
 msgid "Dual Degree MBA-MSIS | July 2024 – May 2026"
 msgstr "MBA-MSIS デュアルディグリー | 2024年7月 – 2026年5月"
 
-#: templates/education.html:23
 msgid ""
 "Pursuing a Dual Degree in Business Administration and Management Information "
 "Systems, with a focus on R, Business Intelligence, AI, Python, and SQL — "
@@ -302,11 +248,9 @@ msgstr ""
 "ジネスインテリジェンス、AI、Python、SQLを中心に、ビジネス戦略とデータドリブン"
 "なテクノロジーを橋渡しする力を磨いています。"
 
-#: templates/hobby.html:5
 msgid "Hobby"
 msgstr "趣味"
 
-#: templates/hobby.html:12
 msgid ""
 "Football is one of my lifelong passions. In March 2018, I traveled across "
 "Europe to experience legendary stadiums live — Signal Iduna Park in Dortmund "
@@ -316,19 +260,15 @@ msgstr ""
 "グナル・イドゥナ・パルク、マドリードのサンチャゴ・ベルナベウなど、伝説的なス"
 "タジアムを現地で体感しました。"
 
-#: templates/hobby.html:18
 msgid "Signal Iduna Park · Dortmund, Germany · March 8, 2018"
 msgstr "ジグナル・イドゥナ・パルク · ドイツ・ドルトムント · 2018年3月8日"
 
-#: templates/hobby.html:23 templates/hobby.html:28
 msgid "Santiago Bernabéu · Madrid, Spain · March 2018"
 msgstr "サンチャゴ・ベルナベウ · スペイン・マドリード · 2018年3月"
 
-#: templates/profile.html:5
 msgid "Profile"
 msgstr "プロフィール"
 
-#: templates/profile.html:18
 msgid ""
 "Born in 1994 in Gunma, Japan, I spent about six years in the IT industry, "
 "advising enterprises on AI strategy and DevSecOps as a consultant focused on "
@@ -340,7 +280,6 @@ msgstr ""
 "DevSecOpsの導入を支援。多くの組織のデジタルトランスフォーメーションを伴走して"
 "きました。"
 
-#: templates/profile.html:21
 msgid ""
 "I later earned a Dual Degree MBA-MSIS at Baylor University, broadening my "
 "perspective across two continents and multiple industries."
@@ -348,7 +287,6 @@ msgstr ""
 "その後、Baylor University にてMBAとMSISのデュアルディグリーを取得。二つの大陸"
 "と複数の業界にまたがる視座を獲得しました。"
 
-#: templates/profile.html:24
 msgid ""
 "After graduation, I will join Hitachi, Ltd. as an AI Strategy Staff, driving "
 "the formulation and execution of enterprise-wide AI strategy."
@@ -356,7 +294,6 @@ msgstr ""
 "卒業後は株式会社日立製作所にAI戦略スタッフとして入社し、全社AI戦略の策定と実"
 "行をリードしていきます。"
 
-#: templates/profile.html:27
 msgid ""
 "Alongside my career, I teach English and social studies to junior high "
 "school students at a local cram school — because I believe in unlocking "
@@ -365,38 +302,77 @@ msgstr ""
 "本業のかたわら、地元の塾で中学生に英語と社会を教えています。人の可能性は、人"
 "生のどの段階からでも開花しうる — そう信じているからです。"
 
-#: templates/top.html:5
+msgid "Projects"
+msgstr "プロジェクト"
+
+msgid "Diabetes dataset — linear regression scatter plot"
+msgstr "Diabetes データセット — 線形回帰の散布図"
+
+msgid "Iris dataset — KNN confusion matrix"
+msgstr "Iris データセット — KNN の混同行列"
+
+msgid "Business Problem"
+msgstr "ビジネス課題"
+
+msgid "Tools Used"
+msgstr "使用ツール"
+
+msgid "Key Features"
+msgstr "主な機能"
+
+msgid "Your Role / Contribution"
+msgstr "担当・貢献"
+
+msgid "Biggest Challenge"
+msgstr "最大の挑戦"
+
+msgid "What I Learned"
+msgstr "学んだこと"
+
+msgid "Live Demo — Tatsuki AI Assistant"
+msgstr "ライブデモ — Tatsuki AI Assistant"
+
+msgid ""
+"Ask me anything about Tatsuki — career, skills, interests. Replies in "
+"English or 日本語."
+msgstr "達樹について何でも聞いてください — 経歴、スキル、興味のあること。英語でも日本語でもお答えします。"
+
+msgid "Send"
+msgstr "送信"
+
+msgid "View on GitHub"
+msgstr "GitHub で見る"
+
+msgid "Live Demo"
+msgstr "ライブデモ"
+
+msgid "Projects coming soon."
+msgstr "プロジェクトは準備中です。"
+
 msgid "Home"
 msgstr "ホーム"
 
-#: templates/top.html:14
 msgid "WELCOME"
 msgstr "WELCOME"
 
-#: templates/top.html:15
 msgid ""
 "Unleashing human potential — for companies, professionals, and children — "
 "through AI"
 msgstr ""
 "AIの力で、企業・プロフェッショナル・子どもたち、すべての人の可能性を解き放つ"
 
-#: templates/work.html:4
 msgid "Work History"
 msgstr "職歴"
 
-#: templates/work.html:11
 msgid "Professional Experience"
 msgstr "Professional Experience"
 
-#: templates/work.html:14
 msgid "Account Executive, SMB & Mid-Market"
 msgstr "Account Executive, SMB & Mid-Market"
 
-#: templates/work.html:15
 msgid "GitLab Japan — Tokyo | October 2020 – July 2024"
 msgstr "GitLab 株式会社 — 東京 | 2020年10月 – 2024年7月"
 
-#: templates/work.html:17
 #, python-format
 msgid ""
 "I spent three years owning GitLab's SMB and Mid-Market business in Japan — "
@@ -411,7 +387,6 @@ msgstr ""
 "は決して市場の追い風によるものではなく、Cクラスのエグゼクティブと地道に積み重"
 "ねた対話の成果であると、いまなお誇りに思っています。"
 
-#: templates/work.html:20
 msgid ""
 "The deals that mattered most to me were the seven-figure ones, where the "
 "conversation was less about DevSecOps features and more about how a company "
@@ -425,7 +400,6 @@ msgstr ""
 "プダウンで開発アーキテクチャの再構築を進めるなかで、大企業における意思決定の"
 "本質的なメカニズムを肌で学びました。"
 
-#: templates/work.html:23
 msgid ""
 "For existing customers, the work shifted from selling to co-designing — "
 "mapping where a team actually was, where it wanted to be, and what AI, CI/"
@@ -441,15 +415,12 @@ msgstr ""
 "エンタープライズの変革は単発のローンチではなく、長期にわたる継続的な営みであ"
 "るという確信を得ました。"
 
-#: templates/work.html:28
 msgid "Business Development Representative"
 msgstr "Business Development Representative"
 
-#: templates/work.html:29
 msgid "Oracle Japan — Tokyo | October 2019 – October 2020"
 msgstr "日本オラクル株式会社 — 東京 | 2019年10月 – 2020年10月"
 
-#: templates/work.html:31
 #, python-format
 msgid ""
 "A year of learning pipeline creation the hard way. I finished top of twelve "
@@ -463,15 +434,12 @@ msgstr ""
 "位ではなく、コールドリードをいかに本気の商談に変えるかという方法論と、それを"
 "チームに横展開してチーム全体を底上げする経験でした。"
 
-#: templates/work.html:36
 msgid "Global Marketing Representative"
 msgstr "Global Marketing Representative"
 
-#: templates/work.html:37
 msgid "Fujitsu — Tokyo | April 2018 – October 2019"
 msgstr "富士通株式会社 — 東京 | 2018年4月 – 2019年10月"
 
-#: templates/work.html:39
 msgid ""
 "My first real exposure to working across borders. I ran analytics and market "
 "research alongside colleagues in the UK and India to raise Fujitsu's brand "
@@ -484,15 +452,12 @@ msgstr ""
 "取り組みました。また、国内で立ち上げたSAP S/4HANAビジネスの欧州展開も支援。こ"
 "の経験が、のちに米国MBAへ進む原動力となりました。"
 
-#: templates/work.html:44
 msgid "Overseas Marketing Intern"
 msgstr "Overseas Marketing Intern"
 
-#: templates/work.html:45
 msgid "Panasonic — Tokyo | February 2017 – March 2017"
 msgstr "パナソニック株式会社 — 東京 | 2017年2月 – 2017年3月"
 
-#: templates/work.html:47
 msgid ""
 "A short stint with Panasonic's Overseas Marketing Division — an early look "
 "at how global consumer-electronics strategy is built across time zones, "
@@ -502,19 +467,15 @@ msgstr ""
 "ティブ設計・組織文化の違いを乗り越えて、グローバルなコンシューマーエレクトロ"
 "ニクス戦略がどう組み立てられるのかを、早い段階で間近に見ることができました。"
 
-#: templates/work.html:51
 msgid "On the Side"
 msgstr "On the Side"
 
-#: templates/work.html:54
 msgid "Private Tutor & Cram School Instructor"
 msgstr "個別指導講師 / 塾講師"
 
-#: templates/work.html:55
 msgid "English & Social Studies, junior-high students"
 msgstr "中学生向け 英語・社会"
 
-#: templates/work.html:57
 #, python-format
 msgid ""
 "Outside work, I teach English and social studies to junior-high students at "
@@ -528,5 +489,5 @@ msgstr ""
 "rel=\"noopener noreferrer\" class=\"work-link\">CER</a>）で中学生に英語と社会"
 "を教えています。エンタープライズ営業と13歳の生徒との距離は、思っているほど遠"
 "くありません。どちらも、相手の空気を読み、要所では立ち止まり、目の前の相手が"
-"自分で思っている以上に成長できると信じる — その姿勢が問われる仕事だと感じて"
-"います。"
+"自分で思っている以上に成長できると信じる — その姿勢が問われる仕事だと感じてい"
+"ます。"

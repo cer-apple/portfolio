@@ -72,6 +72,31 @@
         <p class="project-detail-text">{{ project.localized_lessons_learned|linebreaksbr }}</p>
     </section>
 
+    {% if project.category == 'chatbot' %}
+    <section class="project-detail-section project-detail-chat-section">
+        <h2 class="project-detail-section-title">{% trans "Live Demo — Tatsuki AI Assistant" %}</h2>
+        <p class="project-detail-text project-detail-chat-intro">{% trans "Ask me anything about Tatsuki — career, skills, interests. Replies in English or 日本語." %}</p>
+        <div id="tatsuki-chat"
+             class="chat-window"
+             data-endpoint="{% url 'chat_api' %}"
+             data-greeting-en="Hi! I'm Tatsuki AI Assistant. Ask me about Tatsuki's background, skills, or what he's working on right now."
+             data-greeting-ja="こんにちは！小野木達樹のAIアシスタントです。経歴・スキル・現在の取り組みなど、何でも聞いてください。"
+             data-thinking-en="Thinking..."
+             data-thinking-ja="考え中..."
+             data-error-en="Sorry — something went wrong. Please try again."
+             data-error-ja="申し訳ありません。もう一度お試しください。"
+             data-placeholder-en="Type your question and press Enter..."
+             data-placeholder-ja="質問を入力して Enter で送信...">
+            <div class="chat-log" role="log" aria-live="polite"></div>
+            <form class="chat-form" autocomplete="off">
+                {% csrf_token %}
+                <input type="text" class="chat-input" name="message" maxlength="2000" required>
+                <button type="submit" class="chat-send">{% trans "Send" %}</button>
+            </form>
+        </div>
+    </section>
+    {% endif %}
+
     {% if project.github_url or project.demo_url %}
     <section class="project-detail-links">
         {% if project.github_url %}
@@ -83,4 +108,7 @@
     </section>
     {% endif %}
 </div>
+{% if project.category == 'chatbot' %}
+<script src="{% static 'main/js/chat.js' %}" defer></script>
+{% endif %}
 {% endblock %}
