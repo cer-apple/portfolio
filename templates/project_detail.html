@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ project.title }} - {% trans "Projects" %}{% endblock %}
+{% block meta_description %}{{ project.localized_summary }}{% endblock %}
+
+{% block content %}
+<div class="page-container project-detail">
+    <nav class="advisory-breadcrumb" aria-label="Breadcrumb">
+        <a href="{% url 'projects' %}">{% trans "Projects" %}</a>
+        <span>&rsaquo;</span>
+        <span>{{ project.title }}</span>
+    </nav>
+
+    <header class="project-detail-header">
+        <span class="project-detail-category">{{ project.get_category_display }}</span>
+        <h1 class="project-detail-title">{{ project.title }}</h1>
+        <p class="project-detail-summary">{{ project.localized_summary }}</p>
+    </header>
+
+    {% if project.category == 'ml' %}
+    <div class="project-detail-figure-grid">
+        <img src="{% static 'main/images/ml-diabetes-regression.png' %}" alt="{% trans 'Diabetes dataset — linear regression scatter plot' %}">
+        <img src="{% static 'main/images/ml-iris-confusion.png' %}" alt="{% trans 'Iris dataset — KNN confusion matrix' %}">
+    </div>
+    {% elif project.category == 'media' %}
+    <figure class="project-detail-figure project-detail-video">
+        <video src="{% static 'main/videos/notting-hill.mp4' %}" controls preload="metadata" playsinline></video>
+    </figure>
+    {% elif project.image %}
+    <figure class="project-detail-figure">
+        <img src="{{ project.image.url }}" alt="{{ project.title }}">
+    </figure>
+    {% endif %}
+
+    <section class="project-detail-section">
+        <h2 class="project-detail-section-title">{% trans "Business Problem" %}</h2>
+        <p class="project-detail-text">{{ project.localized_business_problem|linebreaksbr }}</p>
+    </section>
+
+    <section class="project-detail-section">
+        <h2 class="project-detail-section-title">{% trans "Tools Used" %}</h2>
+        <ul class="project-detail-chips">
+            {% for tool in project.tools_list %}
+            <li>{{ tool }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="project-detail-section">
+        <h2 class="project-detail-section-title">{% trans "Key Features" %}</h2>
+        <ul class="project-detail-list">
+            {% for feature in project.features_list %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="project-detail-section">
+        <h2 class="project-detail-section-title">{% trans "Your Role / Contribution" %}</h2>
+        <p class="project-detail-text">{{ project.localized_role|linebreaksbr }}</p>
+    </section>
+
+    <section class="project-detail-section">
+        <h2 class="project-detail-section-title">{% trans "Biggest Challenge" %}</h2>
+        <p class="project-detail-text">{{ project.localized_biggest_challenge|linebreaksbr }}</p>
+    </section>
+
+    <section class="project-detail-section">
+        <h2 class="project-detail-section-title">{% trans "What I Learned" %}</h2>
+        <p class="project-detail-text">{{ project.localized_lessons_learned|linebreaksbr }}</p>
+    </section>
+
+    {% if project.github_url or project.demo_url %}
+    <section class="project-detail-links">
+        {% if project.github_url %}
+        <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="contact-button">{% trans "View on GitHub" %}</a>
+        {% endif %}
+        {% if project.demo_url %}
+        <a href="{{ project.demo_url }}" target="_blank" rel="noopener noreferrer" class="contact-button">{% trans "Live Demo" %}</a>
+        {% endif %}
+    </section>
+    {% endif %}
+</div>
+{% endblock %}

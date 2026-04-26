@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
+
+from .models import Project
 
 
 def top(request):
@@ -42,5 +44,16 @@ def advisory_detail(request):
         'contact_form_url': 'https://docs.google.com/forms/d/e/1FAIpQLScK6VOUFJetWAJvklLkR-zUz-n0vXXYUObrRRAg3q9nHahjUw/viewform',
     }
     return render(request, 'advisory_detail.html', context)
+
+
+def projects(request):
+    """Projects list page — shows all Project records."""
+    return render(request, 'projects.html', {'projects': Project.objects.all()})
+
+
+def project_detail(request, slug):
+    """Individual project detail page."""
+    project = get_object_or_404(Project, slug=slug)
+    return render(request, 'project_detail.html', {'project': project})
 
 

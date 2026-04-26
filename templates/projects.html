@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Projects" %} - {% trans "Portfolio" %}{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">{% trans "PROJECTS" %}</h1>
+
+    {% if projects %}
+    <div class="projects-grid">
+        {% for project in projects %}
+        <a href="{{ project.get_absolute_url }}" class="project-card">
+            <div class="project-card-image">
+                {% if project.category == 'ml' %}
+                    <div class="project-card-image-pair">
+                        <img src="{% static 'main/images/ml-diabetes-regression.png' %}" alt="{% trans 'Diabetes dataset — linear regression scatter plot' %}">
+                        <img src="{% static 'main/images/ml-iris-confusion.png' %}" alt="{% trans 'Iris dataset — KNN confusion matrix' %}">
+                    </div>
+                {% elif project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                {% else %}
+                    <div class="project-card-placeholder">{{ project.get_category_display }}</div>
+                {% endif %}
+            </div>
+            <div class="project-card-body">
+                <span class="project-card-category">{{ project.get_category_display }}</span>
+                <h2 class="project-card-title">{{ project.title }}</h2>
+                <p class="project-card-summary">{{ project.localized_summary }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="projects-empty">{% trans "Projects coming soon." %}</p>
+    {% endif %}
+</div>
+{% endblock %}

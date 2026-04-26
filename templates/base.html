@@ -1,5 +1,6 @@
 {% load static %}
 {% load i18n %}
+{% load i18n_extras %}
 {% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
@@ -37,14 +38,17 @@
                 <li><a href="{% url 'profile' %}" class="nav-link{% if active == 'profile' %} active{% endif %}">{% trans "PROFILE" %}</a></li>
                 <li><a href="{% url 'education' %}" class="nav-link{% if active == 'education' %} active{% endif %}">{% trans "EDUCATION" %}</a></li>
                 <li><a href="{% url 'work' %}" class="nav-link{% if active == 'work' %} active{% endif %}">{% trans "WORK" %}</a></li>
+                <li><a href="{% url 'projects' %}" class="nav-link{% if active == 'projects' or active == 'project_detail' %} active{% endif %}">{% trans "PROJECTS" %}</a></li>
                 <li><a href="{% url 'advisory' %}" class="nav-link{% if active == 'advisory' or active == 'advisory_detail' %} active{% endif %}">{% trans "ADVISORY" %}</a></li>
                 <li><a href="{% url 'hobby' %}" class="nav-link{% if active == 'hobby' %} active{% endif %}">{% trans "HOBBY" %}</a></li>
                 <li><a href="{% url 'contact' %}" class="nav-link{% if active == 'contact' %} active{% endif %}">{% trans "CONTACT" %}</a></li>
             </ul>
             <div class="lang-switcher" aria-label="Language switcher">
-                {% language 'en' %}<a href="{% url request.resolver_match.url_name %}" class="lang-link{% if LANGUAGE_CODE == 'en' %} active{% endif %}">EN</a>{% endlanguage %}
+                {% translate_url request.get_full_path 'en' as en_url %}
+                {% translate_url request.get_full_path 'ja' as ja_url %}
+                <a href="{{ en_url }}" class="lang-link{% if LANGUAGE_CODE == 'en' %} active{% endif %}">EN</a>
                 <span class="lang-sep">/</span>
-                {% language 'ja' %}<a href="{% url request.resolver_match.url_name %}" class="lang-link{% if LANGUAGE_CODE == 'ja' %} active{% endif %}">JP</a>{% endlanguage %}
+                <a href="{{ ja_url }}" class="lang-link{% if LANGUAGE_CODE == 'ja' %} active{% endif %}">JP</a>
             </div>
         </div>
     </nav>
