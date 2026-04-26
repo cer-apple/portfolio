@@ -7,7 +7,7 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.http import require_POST
 
-from .models import Project
+from .models import Project, Skill
 
 logger = logging.getLogger(__name__)
 
@@ -64,6 +64,31 @@ def project_detail(request, slug):
     """Individual project detail page."""
     project = get_object_or_404(Project, slug=slug)
     return render(request, 'project_detail.html', {'project': project})
+
+
+def skills(request):
+    """Skills page — grouped by category in a fixed display order."""
+    skills_by_category = {}
+    for skill in Skill.objects.all().order_by('category', 'order', 'id'):
+        skills_by_category.setdefault(skill.category, []).append(skill)
+
+    grouped = []
+    for code in Skill.CATEGORY_DISPLAY_ORDER:
+        bucket = skills_by_category.get(code)
+        if not bucket:
+            continue
+        grouped.append({
+            'code': code,
+            'label': dict(Skill.CATEGORY_CHOICES).get(code, code),
+            'icon': Skill.CATEGORY_ICONS.get(code, ''),
+            'skills': bucket,
+        })
+    return render(request, 'skills.html', {'grouped_skills': grouped})
+
+
+def resume(request):
+    """Resume page — embeds and offers a download of the resume PDF."""
+    return render(request, 'resume.html')
 
 
 # ----- Chatbot project — Tatsuki AI Assistant -----

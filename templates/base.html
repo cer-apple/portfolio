@@ -39,8 +39,10 @@
                 <li><a href="{% url 'education' %}" class="nav-link{% if active == 'education' %} active{% endif %}">{% trans "EDUCATION" %}</a></li>
                 <li><a href="{% url 'work' %}" class="nav-link{% if active == 'work' %} active{% endif %}">{% trans "WORK" %}</a></li>
                 <li><a href="{% url 'projects' %}" class="nav-link{% if active == 'projects' or active == 'project_detail' %} active{% endif %}">{% trans "PROJECTS" %}</a></li>
+                <li><a href="{% url 'skills' %}" class="nav-link{% if active == 'skills' %} active{% endif %}">{% trans "SKILLS" %}</a></li>
                 <li><a href="{% url 'advisory' %}" class="nav-link{% if active == 'advisory' or active == 'advisory_detail' %} active{% endif %}">{% trans "ADVISORY" %}</a></li>
                 <li><a href="{% url 'hobby' %}" class="nav-link{% if active == 'hobby' %} active{% endif %}">{% trans "HOBBY" %}</a></li>
+                <li><a href="{% url 'resume' %}" class="nav-link{% if active == 'resume' %} active{% endif %}">{% trans "RESUME" %}</a></li>
                 <li><a href="{% url 'contact' %}" class="nav-link{% if active == 'contact' %} active{% endif %}">{% trans "CONTACT" %}</a></li>
             </ul>
             <div class="lang-switcher" aria-label="Language switcher">

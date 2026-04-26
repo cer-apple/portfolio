@@ -1,0 +1,170 @@
+[
+  {
+    "category": "programming_languages",
+    "name": "Python",
+    "name_ja": "",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 10
+  },
+  {
+    "category": "programming_languages",
+    "name": "JavaScript",
+    "name_ja": "",
+    "proficiency": "intermediate",
+    "icon": "",
+    "order": 20
+  },
+  {
+    "category": "programming_languages",
+    "name": "HTML / CSS",
+    "name_ja": "",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 30
+  },
+  {
+    "category": "programming_languages",
+    "name": "SQL",
+    "name_ja": "",
+    "proficiency": "intermediate",
+    "icon": "",
+    "order": 40
+  },
+  {
+    "category": "ai_ml",
+    "name": "LangChain",
+    "name_ja": "",
+    "proficiency": "intermediate",
+    "icon": "",
+    "order": 10
+  },
+  {
+    "category": "ai_ml",
+    "name": "Anthropic Claude API",
+    "name_ja": "",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 20
+  },
+  {
+    "category": "ai_ml",
+    "name": "Google Gemini API",
+    "name_ja": "",
+    "proficiency": "intermediate",
+    "icon": "",
+    "order": 30
+  },
+  {
+    "category": "ai_ml",
+    "name": "scikit-learn",
+    "name_ja": "",
+    "proficiency": "intermediate",
+    "icon": "",
+    "order": 40
+  },
+  {
+    "category": "ai_ml",
+    "name": "n8n",
+    "name_ja": "",
+    "proficiency": "intermediate",
+    "icon": "",
+    "order": 50
+  },
+  {
+    "category": "ai_ml",
+    "name": "Prompt Engineering",
+    "name_ja": "プロンプトエンジニアリング",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 60
+  },
+  {
+    "category": "business",
+    "name": "SaaS Sales",
+    "name_ja": "SaaS 営業",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 10
+  },
+  {
+    "category": "business",
+    "name": "B2B Account Management",
+    "name_ja": "B2B アカウントマネジメント",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 20
+  },
+  {
+    "category": "business",
+    "name": "Consulting",
+    "name_ja": "コンサルティング",
+    "proficiency": "intermediate",
+    "icon": "",
+    "order": 30
+  },
+  {
+    "category": "business",
+    "name": "Business Development",
+    "name_ja": "事業開発",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 40
+  },
+  {
+    "category": "languages",
+    "name": "Japanese",
+    "name_ja": "日本語",
+    "proficiency": "native",
+    "icon": "",
+    "order": 10
+  },
+  {
+    "category": "languages",
+    "name": "English",
+    "name_ja": "英語",
+    "proficiency": "business_professional",
+    "icon": "",
+    "order": 20
+  },
+  {
+    "category": "tools",
+    "name": "Django",
+    "name_ja": "",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 10
+  },
+  {
+    "category": "tools",
+    "name": "Git / GitHub",
+    "name_ja": "",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 20
+  },
+  {
+    "category": "tools",
+    "name": "VS Code",
+    "name_ja": "",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 30
+  },
+  {
+    "category": "tools",
+    "name": "Render Deployment",
+    "name_ja": "Render デプロイ",
+    "proficiency": "intermediate",
+    "icon": "",
+    "order": 40
+  },
+  {
+    "category": "tools",
+    "name": "Google Workspace",
+    "name_ja": "",
+    "proficiency": "advanced",
+    "icon": "",
+    "order": 50
+  }
+]

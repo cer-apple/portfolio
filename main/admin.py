@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Project
+from .models import Project, Skill
 
 
 @admin.register(Project)
@@ -39,5 +39,19 @@ class ProjectAdmin(admin.ModelAdmin):
         }),
         ('Visuals & links', {
             'fields': ('image', 'github_url', 'demo_url'),
+        }),
+    )
+
+
+@admin.register(Skill)
+class SkillAdmin(admin.ModelAdmin):
+    list_display = ('category', 'order', 'name', 'proficiency', 'icon', 'updated_at')
+    list_display_links = ('name',)
+    list_editable = ('order',)
+    list_filter = ('category', 'proficiency')
+    search_fields = ('name', 'name_ja')
+    fieldsets = (
+        (None, {
+            'fields': ('category', 'name', 'name_ja', 'proficiency', 'icon', 'order'),
         }),
     )

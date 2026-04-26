@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Resume" %} - {% trans "Portfolio" %}{% endblock %}
+
+{% block content %}
+{% with resume_url=request.scheme|add:"://"|add:request.get_host|add:"/static/main/resume/Okonogi_Tatsuki_Resume.pdf" %}
+<div class="page-container">
+    <h1 class="page-title">{% trans "RESUME" %}</h1>
+
+    <p class="resume-intro">
+        {% blocktrans %}A current snapshot of my background, experience, and skills. Open the PDF below or download a copy.{% endblocktrans %}
+    </p>
+
+    <div class="resume-actions">
+        <a href="{% static 'main/resume/Okonogi_Tatsuki_Resume.pdf' %}"
+           class="resume-btn resume-btn--primary"
+           download>
+            {% trans "Download PDF" %}
+        </a>
+        <a href="{% static 'main/resume/Okonogi_Tatsuki_Resume.pdf' %}"
+           class="resume-btn resume-btn--secondary"
+           target="_blank"
+           rel="noopener noreferrer">
+            {% trans "Open in new tab" %}
+        </a>
+    </div>
+
+    <div class="resume-viewer" aria-label="{% trans 'Resume PDF preview' %}">
+        <iframe src="{% static 'main/resume/Okonogi_Tatsuki_Resume.pdf' %}#view=FitH"
+                title="{% trans 'Resume PDF' %}"
+                class="resume-iframe"
+                loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="resume-mobile-fallback">
+        <p>
+            {% blocktrans %}PDFs preview best on a desktop browser. On mobile, tap below to download or open the file.{% endblocktrans %}
+        </p>
+        <a href="{% static 'main/resume/Okonogi_Tatsuki_Resume.pdf' %}"
+           class="resume-btn resume-btn--primary"
+           download>
+            {% trans "Download PDF" %}
+        </a>
+    </div>
+</div>
+{% endwith %}
+{% endblock %}

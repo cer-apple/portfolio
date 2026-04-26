@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Skills" %} - {% trans "Portfolio" %}{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">{% trans "SKILLS" %}</h1>
+
+    <p class="skills-intro">
+        {% blocktrans %}A snapshot of the technical, business, and language skills I rely on day-to-day — from building AI applications to closing enterprise SaaS deals.{% endblocktrans %}
+    </p>
+
+    <div class="skills-grid">
+        {% for group in grouped_skills %}
+        <section class="skill-group">
+            <h2 class="skill-group-title">
+                <span class="skill-group-icon" aria-hidden="true">{{ group.icon }}</span>
+                <span>{{ group.label }}</span>
+            </h2>
+            <ul class="skill-list">
+                {% for skill in group.skills %}
+                <li class="skill-item">
+                    <span class="skill-name">
+                        {% if skill.icon %}<span class="skill-icon" aria-hidden="true">{{ skill.icon }}</span>{% endif %}
+                        {{ skill.localized_name }}
+                    </span>
+                    <span class="skill-proficiency skill-proficiency--{{ skill.proficiency }}">
+                        {{ skill.get_proficiency_display }}
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% empty %}
+        <p class="skills-empty">{% trans "Skills will appear here soon." %}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

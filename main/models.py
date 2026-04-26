@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-from django.utils.translation import get_language
+from django.utils.translation import get_language, gettext_lazy as _
 
 
 class Project(models.Model):
@@ -103,3 +103,71 @@ class Project(models.Model):
     def features_list(self):
         source = self._localized('key_features')
         return [f.strip() for f in source.splitlines() if f.strip()]
+
+
+class Skill(models.Model):
+    CATEGORY_CHOICES = [
+        ('programming_languages', _('Programming Languages')),
+        ('ai_ml', _('AI / Machine Learning')),
+        ('business', _('Business / Sales')),
+        ('languages', _('Languages')),
+        ('tools', _('Tools / Frameworks')),
+    ]
+
+    CATEGORY_ICONS = {
+        'programming_languages': '📊',
+        'ai_ml': '🤖',
+        'business': '💼',
+        'languages': '🌐',
+        'tools': '🛠',
+    }
+
+    CATEGORY_DISPLAY_ORDER = [
+        'programming_languages',
+        'ai_ml',
+        'business',
+        'languages',
+        'tools',
+    ]
+
+    PROFICIENCY_CHOICES = [
+        ('beginner', _('Beginner')),
+        ('intermediate', _('Intermediate')),
+        ('advanced', _('Advanced')),
+        ('expert', _('Expert')),
+        ('native', _('Native')),
+        ('business_professional', _('Business Professional')),
+    ]
+
+    name = models.CharField(max_length=100)
+    name_ja = models.CharField(max_length=100, blank=True, default='')
+    category = models.CharField(max_length=40, choices=CATEGORY_CHOICES)
+    proficiency = models.CharField(max_length=30, choices=PROFICIENCY_CHOICES)
+    icon = models.CharField(
+        max_length=8,
+        blank=True,
+        default='',
+        help_text='Optional emoji or short symbol shown next to the skill name.',
+    )
+    order = models.PositiveIntegerField(
+        default=0,
+        help_text='Lower numbers show first within a category.',
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['category', 'order', 'id']
+
+    def __str__(self):
+        return f'{self.name} ({self.get_proficiency_display()})'
+
+    @property
+    def localized_name(self):
+        if get_language() == 'ja' and self.name_ja:
+            return self.name_ja
+        return self.name
+
+    @property
+    def category_icon(self):
+        return self.CATEGORY_ICONS.get(self.category, '')

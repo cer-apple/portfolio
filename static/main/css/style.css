@@ -1269,3 +1269,228 @@ body {
         padding: 0 18px;
     }
 }
+
+/* Skills page */
+.skills-intro {
+    max-width: 720px;
+    margin: 0 auto 50px;
+    text-align: center;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.skill-group {
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 30px 28px;
+    background-color: #0a0a0a;
+}
+
+.skill-group-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+
+.skill-group-icon {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid #1c1c1c;
+}
+
+.skill-item:last-child {
+    border-bottom: none;
+}
+
+.skill-name {
+    color: #eee;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.skill-icon {
+    margin-right: 6px;
+}
+
+.skill-proficiency {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #333;
+    color: #bbb;
+    white-space: nowrap;
+}
+
+.skill-proficiency--advanced,
+.skill-proficiency--expert,
+.skill-proficiency--native {
+    color: var(--accent-orange);
+    border-color: rgba(255, 107, 26, 0.5);
+}
+
+.skill-proficiency--business_professional {
+    color: #ffd699;
+    border-color: rgba(255, 214, 153, 0.4);
+}
+
+.skills-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #888;
+}
+
+/* Resume page */
+.resume-intro {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.resume-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.resume-btn--primary {
+    background-color: var(--accent-orange);
+    color: #fff;
+}
+
+.resume-btn--primary:hover {
+    opacity: 0.85;
+}
+
+.resume-btn--secondary {
+    border: 1px solid #555;
+    color: #fff;
+    background-color: transparent;
+}
+
+.resume-btn--secondary:hover {
+    border-color: #fff;
+}
+
+.resume-viewer {
+    border: 1px solid #222;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #0a0a0a;
+}
+
+.resume-iframe {
+    width: 100%;
+    height: 90vh;
+    min-height: 600px;
+    border: none;
+    display: block;
+    background-color: #fff;
+}
+
+.resume-mobile-fallback {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+    border: 1px dashed #333;
+    border-radius: 8px;
+}
+
+.resume-mobile-fallback p {
+    color: #ccc;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .skill-group {
+        padding: 24px 20px;
+    }
+    .skill-group-title {
+        font-size: 20px;
+    }
+    .skill-item {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .resume-viewer {
+        display: none;
+    }
+    .resume-mobile-fallback {
+        display: block;
+    }
+    .resume-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .resume-btn {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-group {
+        padding: 20px 16px;
+    }
+    .skill-name {
+        font-size: 14px;
+    }
+    .skill-proficiency {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+}

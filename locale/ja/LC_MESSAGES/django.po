@@ -491,3 +491,86 @@ msgstr ""
 "くありません。どちらも、相手の空気を読み、要所では立ち止まり、目の前の相手が"
 "自分で思っている以上に成長できると信じる — その姿勢が問われる仕事だと感じてい"
 "ます。"
+
+# --- Skills page ---
+msgid "SKILLS"
+msgstr "SKILLS"
+
+msgid "Skills"
+msgstr "スキル"
+
+msgid ""
+"A snapshot of the technical, business, and language skills I rely on day-to-"
+"day — from building AI applications to closing enterprise SaaS deals."
+msgstr ""
+"日々の業務で活用している技術・ビジネス・語学スキルのスナップショットです。"
+"AI アプリケーションの構築から、エンタープライズ SaaS の商談クロージングまで。"
+
+msgid "Skills will appear here soon."
+msgstr "スキルは近日中に表示されます。"
+
+msgid "Programming Languages"
+msgstr "プログラミング言語"
+
+msgid "AI / Machine Learning"
+msgstr "AI / 機械学習"
+
+msgid "Business / Sales"
+msgstr "ビジネス / 営業"
+
+msgid "Languages"
+msgstr "言語"
+
+msgid "Tools / Frameworks"
+msgstr "ツール / フレームワーク"
+
+msgid "Beginner"
+msgstr "初級"
+
+msgid "Intermediate"
+msgstr "中級"
+
+msgid "Advanced"
+msgstr "上級"
+
+msgid "Expert"
+msgstr "エキスパート"
+
+msgid "Native"
+msgstr "ネイティブ"
+
+msgid "Business Professional"
+msgstr "ビジネス上級"
+
+# --- Resume page ---
+msgid "RESUME"
+msgstr "RESUME"
+
+msgid "Resume"
+msgstr "履歴書"
+
+msgid ""
+"A current snapshot of my background, experience, and skills. Open the PDF "
+"below or download a copy."
+msgstr ""
+"経歴・職歴・スキルの最新版です。下の PDF をブラウザで閲覧、またはダウンロード"
+"できます。"
+
+msgid "Download PDF"
+msgstr "PDF をダウンロード"
+
+msgid "Open in new tab"
+msgstr "別タブで開く"
+
+msgid "Resume PDF preview"
+msgstr "履歴書 PDF プレビュー"
+
+msgid "Resume PDF"
+msgstr "履歴書 PDF"
+
+msgid ""
+"PDFs preview best on a desktop browser. On mobile, tap below to download or "
+"open the file."
+msgstr ""
+"PDF はデスクトップ環境での閲覧を推奨しています。モバイルでは下のボタンから"
+"ダウンロード・閲覧してください。"
