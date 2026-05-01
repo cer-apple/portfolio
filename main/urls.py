@@ -1,9 +1,14 @@
 from django.urls import path
+from django.views.generic import RedirectView
+
 from . import views
 
 urlpatterns = [
-    path('', views.top, name='top'),
-    path('profile/', views.profile, name='profile'),
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    # 301 redirects for the old paths so previously shared links keep working.
+    path('top/', RedirectView.as_view(pattern_name='home', permanent=True)),
+    path('profile/', RedirectView.as_view(pattern_name='about', permanent=True)),
     path('education/', views.education, name='education'),
     path('work/', views.work, name='work'),
     path('projects/', views.projects, name='projects'),

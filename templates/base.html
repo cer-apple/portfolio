@@ -35,8 +35,8 @@
         <div class="nav-container">
             <div class="nav-spacer" aria-hidden="true"></div>
             <ul class="nav-menu">
-                <li><a href="{% url 'top' %}" class="nav-link{% if active == 'top' %} active{% endif %}">{% trans "TOP" %}</a></li>
-                <li><a href="{% url 'profile' %}" class="nav-link{% if active == 'profile' %} active{% endif %}">{% trans "PROFILE" %}</a></li>
+                <li><a href="{% url 'home' %}" class="nav-link{% if active == 'home' %} active{% endif %}">{% trans "HOME" %}</a></li>
+                <li><a href="{% url 'about' %}" class="nav-link{% if active == 'about' %} active{% endif %}">{% trans "ABOUT" %}</a></li>
                 <li><a href="{% url 'education' %}" class="nav-link{% if active == 'education' %} active{% endif %}">{% trans "EDUCATION" %}</a></li>
                 <li><a href="{% url 'work' %}" class="nav-link{% if active == 'work' %} active{% endif %}">{% trans "WORK" %}</a></li>
                 <li><a href="{% url 'projects' %}" class="nav-link{% if active == 'projects' or active == 'project_detail' %} active{% endif %}">{% trans "PROJECTS" %}</a></li>

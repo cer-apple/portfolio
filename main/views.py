@@ -12,14 +12,14 @@ from .models import Project, Skill
 logger = logging.getLogger(__name__)
 
 
-def top(request):
+def home(request):
     """Home page view"""
-    return render(request, 'top.html')
+    return render(request, 'home.html')
 
 
-def profile(request):
-    """Profile page view"""
-    return render(request, 'profile.html')
+def about(request):
+    """About page view"""
+    return render(request, 'about.html')
 
 
 def education(request):

@@ -166,11 +166,11 @@ msgstr ""
 "MBA-MSIS デュアルディグリー在籍。GitLab・Oracle・富士通を経て、日立製作所にAI"
 "戦略スタッフとして入社予定。"
 
-msgid "TOP"
-msgstr "TOP"
+msgid "HOME"
+msgstr "ホーム"
 
-msgid "PROFILE"
-msgstr "PROFILE"
+msgid "ABOUT"
+msgstr "私について"
 
 msgid "EDUCATION"
 msgstr "EDUCATION"
