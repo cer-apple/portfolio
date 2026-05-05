@@ -33,8 +33,8 @@ CSRF_TRUSTED_ORIGINS = config(
     cast=Csv(),
 )
 
-# Anthropic Claude API — powers the Chatbot project (Tatsuki AI Assistant).
-ANTHROPIC_API_KEY = config('ANTHROPIC_API_KEY', default='')
+# Google Gemini API — powers the Chatbot project (Tatsuki AI Assistant).
+GEMINI_API_KEY = config('GEMINI_API_KEY', default='')
 
 # HTTPS hardening — only enforced when DEBUG is off (i.e., in production).
 SESSION_COOKIE_SECURE = not DEBUG

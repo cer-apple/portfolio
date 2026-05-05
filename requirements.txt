@@ -4,8 +4,8 @@ sqlparse==0.5.5
 typing_extensions==4.15.0
 Pillow==12.2.0
 
-# Anthropic Claude API (chatbot project)
-anthropic==0.40.0
+# Google Gemini API (chatbot project)
+google-generativeai==0.8.3
 
 # Production deployment
 gunicorn==23.0.0

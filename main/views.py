@@ -134,7 +134,7 @@ CHAT_MAX_USER_MSG_CHARS = 2000
 @require_POST
 def chat_api(request):
     """JSON chat endpoint for the Chatbot project demo."""
-    if not settings.ANTHROPIC_API_KEY:
+    if not settings.GEMINI_API_KEY:
         return JsonResponse(
             {'error': 'Chat is not configured on this server.'},
             status=503,
@@ -177,26 +177,32 @@ def chat_api(request):
         return JsonResponse({'error': 'Last message must come from the user.'}, status=400)
 
     try:
-        import anthropic
+        import google.generativeai as genai
     except ImportError:
-        logger.exception('anthropic SDK not installed')
+        logger.exception('google-generativeai SDK not installed')
         return JsonResponse({'error': 'Chat is not configured on this server.'}, status=503)
 
+    gemini_messages = [
+        {
+            'role': 'user' if m['role'] == 'user' else 'model',
+            'parts': [m['content']],
+        }
+        for m in cleaned
+    ]
+
     try:
-        client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
-        response = client.messages.create(
-            model='claude-haiku-4-5-20251001',
-            max_tokens=512,
-            system=CHAT_SYSTEM_PROMPT,
-            messages=cleaned,
+        genai.configure(api_key=settings.GEMINI_API_KEY)
+        model = genai.GenerativeModel(
+            model_name='gemini-2.5-flash',
+            system_instruction=CHAT_SYSTEM_PROMPT,
         )
-        reply_parts = [
-            block.text for block in response.content
-            if getattr(block, 'type', None) == 'text'
-        ]
-        reply = ''.join(reply_parts).strip() or "I don't have an answer for that right now."
+        response = model.generate_content(
+            gemini_messages,
+            generation_config={'max_output_tokens': 512},
+        )
+        reply = (response.text or '').strip() or "I don't have an answer for that right now."
     except Exception:
-        logger.exception('Claude API call failed')
+        logger.exception('Gemini API call failed')
         return JsonResponse(
             {'error': 'Sorry — the assistant is unavailable right now.'},
             status=502,
