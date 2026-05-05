@@ -1,8 +1,38 @@
 # Portfolio Website
 
-A minimal Django-powered personal portfolio with a monochrome aesthetic — Playfair Display serif headings on a black canvas, Inter for body text.
+> A minimal Django-powered personal portfolio with a monochrome aesthetic — Playfair Display serif headings on a black canvas, Inter for body text.
 
-## Setup
+## 🚀 Live Demo
+
+**🌐 [Visit the Live Site → tatsuki-portfolio.onrender.com](https://tatsuki-portfolio.onrender.com/en/)**
+
+> ⏱️ The site is hosted on Render's free tier — first visit may take ~30 seconds to wake up.
+
+## ✨ Features
+
+- 🌐 **Bilingual Support** — Full English / Japanese internationalization via Django i18n
+- 🤖 **AI Chatbot** — Custom Tatsuki AI Assistant for interactive conversations
+- 📂 **Project Showcase** — Admin-managed portfolio with images and detailed descriptions
+- 📋 **Skills & Resume** — Dynamic skill management through Django admin
+- 🎨 **Monochrome Design** — Minimal aesthetic with Playfair Display + Inter typography
+- 📱 **Responsive** — Mobile-first design
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|-----------|
+| Backend | Django 6.0, Python 3.11+ |
+| Frontend | HTML, CSS, JavaScript |
+| Database | PostgreSQL (production) / SQLite (local) |
+| Deployment | Render (Web + Database) |
+| Static Files | WhiteNoise (compressed + manifest) |
+| WSGI Server | Gunicorn |
+| Internationalization | Django i18n (EN/JA) |
+| Configuration | python-decouple |
+
+---
+
+## 🔧 Setup
 
 ### 1. Activate virtual environment
 
@@ -11,6 +41,7 @@ source venv/bin/activate
 ```
 
 On Windows:
+
 ```bash
 venv\Scripts\activate
 ```
@@ -33,9 +64,11 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-The site is available at `http://localhost:8000`.
+The site is available at [http://localhost:8000](http://localhost:8000).
 
-## Project Structure
+---
+
+## 📂 Project Structure
 
 ```
 portfolio/
@@ -62,31 +95,40 @@ portfolio/
 └── manage.py
 ```
 
-## Pages
+---
 
-- **TOP** — Hero section with portrait and tagline
-- **PROFILE** — Bio and background
-- **EDUCATION** — Academic credentials
-- **WORK** — Professional experience and side business
-- **CONTACT** — Email, LinkedIn, GitHub
+## 📄 Pages
 
-## Customization
+| Page | Description |
+|------|-------------|
+| **HOME** | Hero section with portrait and tagline |
+| **ABOUT** | Bio and background |
+| **EDUCATION** | Academic credentials |
+| **WORK** | Professional experience and side business |
+| **CONTACT** | Email, LinkedIn, GitHub |
 
-### Colors & fonts
+---
 
-Edit [static/main/css/style.css](static/main/css/style.css):
-- Background: `background-color: #000` on `body`
-- Fonts: Playfair Display (headings), Inter (body)
+## 🎨 Customization
 
-### Navigation links
+### Colors & Fonts
 
-Edit [templates/base.html](templates/base.html).
+Edit `static/main/css/style.css`:
 
-### Page content
+- **Background**: `background-color: #000` on body
+- **Fonts**: Playfair Display (headings), Inter (body)
 
-Each page is a standalone template under [templates/](templates/). The `{% extends "base.html" %}` line pulls in the shared layout.
+### Navigation Links
 
-## Common commands
+Edit `templates/base.html`.
+
+### Page Content
+
+Each page is a standalone template under `templates/`. The `{% extends "base.html" %}` line pulls in the shared layout.
+
+---
+
+## 💻 Common Commands
 
 ```bash
 # Start dev server
@@ -97,34 +139,33 @@ python manage.py createsuperuser
 
 # Collect static files (for production)
 python manage.py collectstatic
+
+# Compile translation messages
+python manage.py compilemessages
 ```
 
-## Dependencies
+---
 
-- **Django 6.0** — Web framework
+## 🌐 Deployment
 
-See [requirements.txt](requirements.txt) for pinned versions.
-
-## Deployment
-
-This project ships with a Render Blueprint ([render.yaml](render.yaml)) that provisions a free web service plus a free PostgreSQL database in one click.
+This project ships with a **Render Blueprint** (`render.yaml`) that provisions a free web service plus a free PostgreSQL database in one click.
 
 ### Architecture
 
 | Layer | Local dev | Render |
-| --- | --- | --- |
+|-------|-----------|--------|
 | WSGI server | `runserver` | `gunicorn portfolio.wsgi:application` |
 | Static files | Django dev server | WhiteNoise (compressed + manifest) |
 | Database | SQLite (`db.sqlite3`) | Managed PostgreSQL |
 | Settings | reads `.env` (optional) | reads Render env vars |
 | `DEBUG` | `True` | `False` |
 
-### Environment variables
+### Environment Variables
 
-Settings come from environment variables via [python-decouple](https://github.com/HBNetwork/python-decouple). See [.env.example](.env.example) for the full list.
+Settings come from environment variables via `python-decouple`. See `.env.example` for the full list.
 
 | Variable | Required | Notes |
-| --- | --- | --- |
+|----------|----------|-------|
 | `SECRET_KEY` | prod | Render auto-generates this when using the Blueprint. |
 | `DEBUG` | always | Defaults to `False`. Set to `True` only locally. |
 | `ALLOWED_HOSTS` | always | Defaults to `localhost,127.0.0.1,.onrender.com`. |
@@ -136,12 +177,12 @@ Settings come from environment variables via [python-decouple](https://github.co
 
 1. Push this repo to GitHub.
 2. In the Render dashboard, click **New → Blueprint** and connect the repo.
-3. Render reads [render.yaml](render.yaml), provisions the database, and runs [build.sh](build.sh).
+3. Render reads `render.yaml`, provisions the database, and runs `build.sh`.
 4. First deploy takes ~5 min. Subsequent pushes to `main` redeploy automatically.
 
-### Build pipeline
+### Build Pipeline
 
-[build.sh](build.sh) runs on every deploy:
+`build.sh` runs on every deploy:
 
 ```bash
 pip install -r requirements.txt
@@ -150,16 +191,27 @@ python manage.py compilemessages            # builds .mo from locale/*/django.po
 python manage.py migrate --no-input
 ```
 
-### Local production-mode smoke test
+### Local Production-Mode Smoke Test
 
 ```bash
 DEBUG=False SECRET_KEY=test ALLOWED_HOSTS=localhost,127.0.0.1 \
   python manage.py collectstatic --no-input
+
 DEBUG=False SECRET_KEY=test ALLOWED_HOSTS=localhost,127.0.0.1 \
   gunicorn portfolio.wsgi:application
 ```
 
-## Notes
+---
+
+## 📝 Notes
 
 - Portrait image lives at `main/static/main/images/portrait.jpg`; replace to customize.
 - After editing template strings or `locale/*/django.po`, run `python manage.py compilemessages` and restart the server.
+
+---
+
+## 👤 Author
+
+**Tatsuki Okonogi**
+- GitHub: [@cer-apple](https://github.com/cer-apple)
+- Live Site: [tatsuki-portfolio.onrender.com/en/](https://tatsuki-portfolio.onrender.com/en/)
