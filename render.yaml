@@ -30,3 +30,5 @@ services:
         fromDatabase:
           name: tatsuki-portfolio-db
           property: connectionString
+      - key: GEMINI_API_KEY
+        sync: false

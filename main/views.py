@@ -134,9 +134,15 @@ CHAT_MAX_USER_MSG_CHARS = 2000
 @require_POST
 def chat_api(request):
     """JSON chat endpoint for the Chatbot project demo."""
-    if not settings.GEMINI_API_KEY:
+    key = settings.GEMINI_API_KEY or ''
+    print(
+        f"DEBUG GEMINI_API_KEY exists: {bool(key)}, length: {len(key)}, "
+        f"prefix: {key[:4] if key else ''!r}",
+        flush=True,
+    )
+    if not key:
         return JsonResponse(
-            {'error': 'Chat is not configured on this server.'},
+            {'error': 'Chat is not configured on this server. (no api key)'},
             status=503,
         )
 
@@ -180,7 +186,10 @@ def chat_api(request):
         import google.generativeai as genai
     except ImportError:
         logger.exception('google-generativeai SDK not installed')
-        return JsonResponse({'error': 'Chat is not configured on this server.'}, status=503)
+        return JsonResponse(
+            {'error': 'Chat is not configured on this server. (sdk import failed)'},
+            status=503,
+        )
 
     gemini_messages = [
         {
