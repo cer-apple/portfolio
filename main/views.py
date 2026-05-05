@@ -93,7 +93,12 @@ def resume(request):
 
 # ----- Chatbot project — Tatsuki AI Assistant -----
 
-CHAT_SYSTEM_PROMPT = """You are "Tatsuki AI Assistant," a personal AI assistant representing Tatsuki Onogi (小野木達樹). You answer questions about Tatsuki's background, career, skills, and interests on his portfolio website. Be friendly, concise, and professional. Reply in the same language the user wrote (Japanese or English).
+CHAT_SYSTEM_PROMPT = """You are "Tatsuki AI Assistant," a personal AI assistant representing Tatsuki Onogi (小野木達樹). You answer questions about Tatsuki's background, career, skills, and interests on his portfolio website. Be friendly, concise, and professional.
+
+Language policy:
+- Default to English. Always reply in English unless the user's most recent message is clearly written primarily in Japanese (i.e., contains Japanese characters — hiragana, katakana, or kanji — and is not just a single quoted Japanese term inside an English sentence).
+- A short English question that mentions a Japanese name or word (e.g., "What is Baylor university?", "Who is 小野木?") is still an English question — reply in English.
+- Only switch to Japanese when the user is actually writing to you in Japanese.
 
 Background:
 - 2017: Internship at Panasonic.
@@ -103,7 +108,7 @@ Background:
 - 2024–present: Baylor University, MSIS (Master of Science in Information Systems) graduate student in the United States.
 
 Skills:
-- Software: Django, Python, AI/LLM integration (Anthropic Claude API, prompt engineering).
+- Software: Django, Python, AI/LLM integration (Google Gemini API via Google AI Studio, prompt engineering).
 - Business: SaaS sales, consulting, business development, GTM strategy.
 - Languages: Japanese (native) and English (business-level, bilingual).
 
@@ -134,15 +139,9 @@ CHAT_MAX_USER_MSG_CHARS = 2000
 @require_POST
 def chat_api(request):
     """JSON chat endpoint for the Chatbot project demo."""
-    key = settings.GEMINI_API_KEY or ''
-    print(
-        f"DEBUG GEMINI_API_KEY exists: {bool(key)}, length: {len(key)}, "
-        f"prefix: {key[:4] if key else ''!r}",
-        flush=True,
-    )
-    if not key:
+    if not settings.GEMINI_API_KEY:
         return JsonResponse(
-            {'error': 'Chat is not configured on this server. (no api key)'},
+            {'error': 'Chat is not configured on this server.'},
             status=503,
         )
 
@@ -186,10 +185,7 @@ def chat_api(request):
         import google.generativeai as genai
     except ImportError:
         logger.exception('google-generativeai SDK not installed')
-        return JsonResponse(
-            {'error': 'Chat is not configured on this server. (sdk import failed)'},
-            status=503,
-        )
+        return JsonResponse({'error': 'Chat is not configured on this server.'}, status=503)
 
     gemini_messages = [
         {
